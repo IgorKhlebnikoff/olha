@@ -1,0 +1,12 @@
+en:
+  layouts:
+    header:
+      title: 'Olha'
+      home: 'Home'
+      sign_up: 'Sign Up'
+      login: 'Login'
+      wish_list: "My Wishes (%{items_count})"
+      cart: "My Cart (%{items_count})"
+      sign_out: 'Sign Out'
+    footer:
+      copy_right: 'Copy Right'

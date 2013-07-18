@@ -1,0 +1,16 @@
+doctype
+html
+  head
+    title Olha
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  body class="#{yield(:body_class)}"
+    header
+      .container-fluid
+        = render partial: 'layouts/header'
+    #wrap
+      .container-fluid
+        = yield
+        = render partial: 'shared/modal_window'
+    = render partial: 'layouts/footer'

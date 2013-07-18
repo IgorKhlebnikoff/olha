@@ -1,0 +1,5 @@
+en:
+  controllers:
+    application:
+      no_admin_permissions: "Sorry, but You have no admin's permissions"
+    admin:

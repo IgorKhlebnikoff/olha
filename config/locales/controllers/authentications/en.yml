@@ -1,0 +1,6 @@
+en:
+  controllers:
+    authentications:
+      signed: 'Signed in successfully.'
+      acount_createdand_signed: 'Account created and signed in successfully.'
+      signed_error: 'Error while creating a user account. Please try again.'

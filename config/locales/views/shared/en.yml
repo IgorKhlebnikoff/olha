@@ -1,0 +1,4 @@
+en:
+  shared:
+    login_via_social_networks:
+      fb_login: 'Login with Facabook'

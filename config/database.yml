@@ -1,0 +1,20 @@
+development:
+  adapter: postgresql
+  database: olha_dev
+  host: localhost
+  username: postgres
+  password: password
+
+test:
+  adapter: postgresql
+  database: olha_test
+  host: localhost
+  username: postgres
+  password: password
+
+production:
+  adapter: postgresql
+  database: olha_prodaction
+  host: localhost
+  username: postgres
+  password: password
