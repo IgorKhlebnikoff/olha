@@ -1,16 +1,17 @@
 class Admin::VariantsController < ApplicationController
-  before_filter :find_product, only: [:show, :edit, :update, :destroy]
+  before_filter :find_product
+  before_filter :find_variant, only: [:show, :edit, :update, :destroy]
 
   def index
-    @variants = Product.all
+    @variants = @product.variants
   end
 
   def new
-    @variant = Product.create(params[:variant])
+    @variant = @product.variants.build
   end
 
   def create
-    @variant = Product.create(params[:variant])
+    @variant = @product.variants.create(params[:variant])
   end
 
   def update
@@ -24,6 +25,10 @@ class Admin::VariantsController < ApplicationController
   private
 
   def find_product
-    @variant = Product.find_by_id(params[:variant_id])
+    @product = Product.find_by_id(params[:product_id])
+  end
+
+  def find_variant
+    @variant = @product.variants.find_by_id(params[:id])
   end
 end

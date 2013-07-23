@@ -24,6 +24,7 @@ gem 'omniauth-facebook'
 gem 'oauth2'
 gem 'pry-rails'
 gem 'breadcrumbs_on_rails'
+gem 'activemerchant'
 
 group :test do
   gem 'rspec'

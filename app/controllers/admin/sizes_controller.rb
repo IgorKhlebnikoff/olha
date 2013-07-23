@@ -1,4 +1,8 @@
 class Admin::SizesController < ApplicationController
+  def index
+    @sizes = Size.all
+  end
+
   def new
     @size = Size.new
   end

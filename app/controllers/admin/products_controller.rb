@@ -6,7 +6,7 @@ class Admin::ProductsController < ApplicationController
   end
 
   def new
-    @product = Product.create(params[:product])
+    @product = Product.new
   end
 
   def create
