@@ -1,4 +1,5 @@
 class Admin::CategoriesController < ApplicationController
+  before_filter :find_category, only: [:edit, :update, :destroy]
   def index
     @categories = Category.all
   end
@@ -8,10 +9,20 @@ class Admin::CategoriesController < ApplicationController
   end
 
   def create
-    Category.create(params[:category])
+    @category = Category.create(params[:category])
+  end
+
+  def update
+    @category.update_attributes(params[:category])
   end
 
   def destroy
-    Category.find_by_id(params[:id]).destroy
+    @category.destroy
+  end
+
+  private
+
+  def find_category
+    @category = Category.find_by_id(params[:id])
   end
 end

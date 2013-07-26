@@ -1,1 +1,9 @@
- 
+#categories
+  h3= t('.categories_title')
+  #categories_list
+    - if @categories
+      = render partial: '/admin/categories/category', collection: @categories
+    - else
+      p#no_categories= t('.no_categories')
+  #add_category
+    = link_to t('.add_category'), new_admin_category_path, remote: true

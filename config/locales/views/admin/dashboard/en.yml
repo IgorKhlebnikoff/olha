@@ -1,0 +1,7 @@
+en:
+  admin:
+    dashboard:
+      index:
+        categories_title: 'Categories'
+        add_category: 'Add Category'
+        no_categories: 'No categories'

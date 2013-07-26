@@ -14,3 +14,9 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require_tree .
+
+Popup = function() {}
+
+Popup.hideModal = function() {
+  $('#modal_window').modal('hide');
+}

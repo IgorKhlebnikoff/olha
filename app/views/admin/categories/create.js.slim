@@ -1,0 +1,4 @@
+| if ($('#no_categories')) {
+|   $('p#no_categories').remove();
+| }
+| $('#categories_list').append("#{j(render partial: 'category', locals: { category: @category })}");

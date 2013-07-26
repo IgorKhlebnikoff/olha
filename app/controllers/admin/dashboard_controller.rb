@@ -3,6 +3,6 @@ class Admin::DashboardController < ApplicationController
   before_filter :is_admin?
 
   def index
-
+    @categories = Category.all
   end
 end

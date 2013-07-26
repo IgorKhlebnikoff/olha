@@ -1,0 +1,4 @@
+.row-fluid id="category_#{category.id}"
+  .span4= category.name
+  .span4= link_to t('.edit'), edit_admin_category_path(category), remote: true
+  .span4= link_to t('.delete'), admin_category_path(category), remote: true, method: 'delete'
