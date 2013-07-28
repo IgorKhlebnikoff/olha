@@ -10,7 +10,7 @@ html
       .container-fluid
         = render partial: 'layouts/header'
     #wrap
-      .container-fluid
+      .container-fluid.content-container
         = yield
         = render partial: 'shared/modal_window'
         div#modal_window.modal.hide.fade

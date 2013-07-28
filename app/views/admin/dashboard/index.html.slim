@@ -1,7 +1,7 @@
 #admins
   #categories
     h3= t('.categories_title')
-    #categories_list.list
+    #categories_list.block
       - if @categories
         = render partial: '/admin/categories/category', collection: @categories
       - else
