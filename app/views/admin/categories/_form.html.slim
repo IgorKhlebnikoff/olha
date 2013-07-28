@@ -1,5 +1,6 @@
 .row-fluid
-  = form_for @category, url: url, method: method, remote: true do |f|
+  = form_for @category, url: url, method: method, remote: true, builder: StandartBuilder do |f|
+    div= f.error_messages(attribute_name: false)
     .row-fluid
       .span3= f.label t('.name')
       .span7= f.text_field :name

@@ -9,11 +9,16 @@ class Admin::CategoriesController < ApplicationController
   end
 
   def create
-    @category = Category.create(params[:category])
+    @category = Category.new(params[:category])
+    unless @category.save
+      render action: :new
+    end
   end
 
   def update
-    @category.update_attributes(params[:category])
+    unless @category.update_attributes(params[:category])
+      render action: :edit
+    end
   end
 
   def destroy

@@ -1,3 +1,26 @@
 en:
-  save: 'Save'
+  date:
+    formats:
+      default: '%Y-%m-%d'
+      short: '%b %d'
+      middle: '%b %d, %Y'
+      long: '%B %d, %Y'
   cancel: 'Cancel'
+  save: 'Save'
+  delete: 'Delete'
+  edit: 'Edit'
+  close: 'Close'
+  update: 'Update'
+  view_all: 'View All'
+  view: 'View'
+  add: 'Add'
+  all: 'All'
+  can_not_save: "%{count} prohibited this %{object_name} from being saved:"
+  yesterday: 'Yesterday'
+  this_week: 'This Week'
+  this_month: 'This Month'
+  this_year: 'This Year'
+  submit: 'Submit'
+  confirm: 'Confirm'
+  confirmation: 'Confirmation'
+  no_items: 'There are no items'

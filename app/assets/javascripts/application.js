@@ -20,3 +20,12 @@ Popup = function() {}
 Popup.hideModal = function() {
   $('#modal_window').modal('hide');
 }
+
+$(function() {
+  $("form").bind("ajax:beforeSend", function(){
+    $("#spinner_question").show();
+  })
+  $("form").bind("ajax:complete", function(){
+    $("#spinner_question").hide();
+  })
+});
