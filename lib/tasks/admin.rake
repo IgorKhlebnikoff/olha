@@ -3,6 +3,7 @@ namespace :admin do
   desc "add admin role to user with specific email"
   task :create => :environment do
     email = ENV['email']
+    Role.find_by_name('admin').nil? ? Role.create(name: 'admin') : nil
     if user = User.find_by_email(email)
       user.role = Role.find_by_name('admin')
       user.save
