@@ -1,1 +1,3 @@
 | $("#category_#{@category.id}").remove();
+- unless @categories_true
+  | $('p#no_categories').show();

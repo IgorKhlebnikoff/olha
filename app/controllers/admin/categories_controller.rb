@@ -22,7 +22,12 @@ class Admin::CategoriesController < ApplicationController
   end
 
   def destroy
-    @category.destroy
+    if Assortment.find_by_category_id(@category.id)
+      render :index
+    else
+      @category.destroy
+      @categories_true = Category.first
+    end
   end
 
   private
@@ -30,4 +35,5 @@ class Admin::CategoriesController < ApplicationController
   def find_category
     @category = Category.find_by_id(params[:id])
   end
+
 end
