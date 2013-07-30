@@ -8,5 +8,6 @@ class Assortment < ActiveRecord::Base
   
   attr_accessible :name, :category_id
 
-  validates :name, presence: true
+  validates :name, presence: true, uniqueness: true
+  validates :category_id, presence: true
 end

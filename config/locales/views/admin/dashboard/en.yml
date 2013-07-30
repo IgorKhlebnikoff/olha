@@ -5,3 +5,6 @@ en:
         categories_title: 'Categories'
         add_category: 'Add Category'
         no_categories: 'No categories'
+        assortments_title: 'Assortments'
+        no_assortments: 'No Assortments'
+        add_assortment: 'Add Assortment'
