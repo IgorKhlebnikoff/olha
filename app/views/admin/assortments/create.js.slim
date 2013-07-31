@@ -1,5 +1,5 @@
 - if @assortment.valid?
   | if ($('#no_assortments')) {
-  |   $('p#no_assortments').remove();
+  |   $('p#no_assortments').hide();
   | }
   | $('#assortments_list').append("#{j(render partial: 'assortment', locals: { assortment: @assortment })}");

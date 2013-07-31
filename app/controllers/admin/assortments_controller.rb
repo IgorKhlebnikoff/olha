@@ -7,11 +7,14 @@ class Admin::AssortmentsController < ApplicationController
   end
 
   def create
-    @assortment = Assortment.create(params[:assortment])
+    if Category.find_by_id(params[:assortment][:category_id]) 
+      @assortment = Assortment.create(params[:assortment])
+    end
   end
 
   def destroy
     @assortment.destroy
+    @assortment_true = Assortment.first
   end
 
   def update
