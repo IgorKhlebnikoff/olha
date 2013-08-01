@@ -1,5 +1,6 @@
 - if @category.valid?
   | if ($('#no_categories')) {
-  |   $('p#no_categories').remove();
+  |   $('p#no_categories').hide();
   | }
   | $('#categories_list').append("#{j(render partial: 'category', locals: { category: @category })}");
+| $('#modal_window').modal('hide');

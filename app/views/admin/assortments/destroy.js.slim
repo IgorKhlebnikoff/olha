@@ -1,1 +1,3 @@
 | $("#assortment_#{@assortment.id}").remove();
+- unless @assortment_true
+  | $('p#no_assortments').show();
