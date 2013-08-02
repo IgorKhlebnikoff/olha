@@ -1,0 +1,9 @@
+en:
+  admin:
+    products:
+      form:
+        name: 'Name'
+        description: 'Description'
+        assortment: 'Assortment'
+      show:
+        back: 'Back'
