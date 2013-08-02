@@ -11,5 +11,5 @@
       .span3= f.label t('.assortment')
       .span6= f.collection_select :assortment_id, @assortments, :id, :name, prompt: true
     .row-fluid
-      .span6= f.submit t('.save')
-      .span6= link_to t('.cancel'), 'javascript: void(false)', onclick: 'Popup.hideModal()'
+      .span6= f.submit t('save')
+      .span6= link_to t('cancel'), 'javascript: void(false)', onclick: 'Popup.hideModal()'
