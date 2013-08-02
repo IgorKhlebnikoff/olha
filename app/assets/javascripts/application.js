@@ -15,17 +15,23 @@
 //= require twitter/bootstrap
 //= require_tree .
 
+$(document).ready(function() {
+  $("#categories_list a[data-method='delete']").each(function(index, element) {
+    $(element).bind("ajax:beforeSend", function() {
+      $('#categories_list').append('<div class="back-wall"><div>');
+    });
+  });
+});
+
+sendRequest = function(url, type) {
+  $.ajax({
+    type: type,
+    url: url,
+  });
+}
+
 Popup = function() {}
 
 Popup.hideModal = function() {
   $('#modal_window').modal('hide');
 }
-
-$(function() {
-  $("form").bind("ajax:beforeSend", function(){
-    $("#spinner_question").show();
-  })
-  $("form").bind("ajax:complete", function(){
-    $("#spinner_question").hide();
-  })
-});

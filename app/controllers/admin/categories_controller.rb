@@ -1,5 +1,6 @@
 class Admin::CategoriesController < ApplicationController
   before_filter :find_category, only: [:edit, :update, :destroy]
+
   def index
     @categories = Category.all
   end
@@ -26,7 +27,6 @@ class Admin::CategoriesController < ApplicationController
       render :index
     else
       @category.destroy
-      @categories_true = Category.first
     end
   end
 

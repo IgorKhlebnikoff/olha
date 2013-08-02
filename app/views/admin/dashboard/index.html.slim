@@ -1,31 +1,32 @@
 #admins
-  #categories
+  #categories data-url="#{admin_categories_path}"
     h3= t('.categories_title')
+    .row-fluid
+      .span12= link_to t('.add_category'), new_admin_category_path, remote: true
     #categories_list.block
       - if @categories.any?
         = render partial: '/admin/categories/category', collection: @categories
       - else
         p#no_categories= t('.no_categories')
-    #add_category
-      = link_to t('.add_category'), new_admin_category_path, remote: true
     #paginator
-      =paginate @categories,  remote: true
+      = paginate @categories, remote: true
 
-  #assortments
+  #assortments data-url="#{admin_assortments_path}"
     h3= t('.assortments_title')
+    .row-fluid
+      .span12= link_to t('.add_assortment'),  new_admin_assortment_path, remote: true
     #assortments_list.block
       - if @assortments.any?
         = render partial: '/admin/assortments/assortment', collection: @assortments
       - else
         p#no_assortments= t('.no_assortments')
-    #add_assortment
-      = link_to t('.add_assortment'),  new_admin_assortment_path, remote: true
-  #products
+
+  #products data-url="#{admin_products_path}"
     h3= t('.products_title')
+    .row-fluid
+      .span12= link_to t('.add_product'),  new_admin_product_path, remote: true
     #products_list.block
       - if @products.any?
         = render partial: '/admin/products/product', collection: @products
       - else
         p#no_products= t('.no_products')
-    #add_product
-      = link_to t('.add_product'),  new_admin_product_path, remote: true

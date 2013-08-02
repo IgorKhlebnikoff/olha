@@ -1,6 +1,6 @@
 .row-fluid
   = form_for @assortment, url: url, method: method, remote: true, builder: StandartBuilder do |f|
-    div= f.error_messages(attribute_name: false)
+    div= f.error_messages
     .row-fluid
       .span2= f.label t('.name')
       .span5= f.text_field :name
