@@ -1,8 +1,13 @@
 class Admin::ProductsController < ApplicationController
   before_filter :find_product, only: [:show, :edit, :update, :destroy]
+  before_filter :all_assortments, only: [:new, :edit]
 
   def index
     @products = Product.all
+  end
+
+  def show
+  
   end
 
   def new
@@ -14,7 +19,9 @@ class Admin::ProductsController < ApplicationController
   end
 
   def update
-    @product.update_attributes(params[:product])
+    unless @product.update_attributes(params[:product])
+      render action: :edit
+    end
   end
 
   def destroy
@@ -25,5 +32,9 @@ class Admin::ProductsController < ApplicationController
 
   def find_product
     @product = Product.find_by_id(params[:id])
+  end
+  
+   def all_assortments
+      @assortments = Assortment.all
   end
 end

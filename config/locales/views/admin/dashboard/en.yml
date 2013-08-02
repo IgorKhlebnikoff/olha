@@ -8,3 +8,6 @@ en:
         assortments_title: 'Assortments'
         no_assortments: 'No Assortments'
         add_assortment: 'Add Assortment'
+        products_title: 'Products'
+        no_products: 'No Products'
+        add_product: 'Add Product'

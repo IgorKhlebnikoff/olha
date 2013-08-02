@@ -36,5 +36,5 @@ group :test do
   gem 'factory_girl_rails', require: false
   gem 'faker'
   gem 'capybara', '1.1.2'
-  gem 'capybara-webkit'
+#  gem 'capybara-webkit'
 end

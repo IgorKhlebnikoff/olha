@@ -17,3 +17,12 @@
         p#no_assortments= t('.no_assortments')
     #add_assortment
       = link_to t('.add_assortment'),  new_admin_assortment_path, remote: true
+  #products
+    h3= t('.products_title')
+    #products_list.block
+      - if @products.any?
+        = render partial: '/admin/products/product', collection: @products
+      - else
+        p#no_products= t('.no_products')
+    #add_product
+      = link_to t('.add_product'),  new_admin_product_path, remote: true

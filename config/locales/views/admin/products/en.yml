@@ -1,0 +1,14 @@
+en:
+  admin:
+    products:
+      form:
+        name: 'Name'
+        description: 'Description'
+        assortment: 'Assortment'
+        cancel: 'Cancel'
+        save: 'Save'
+      product:
+        edit: 'Edit'
+        delete: 'Delete'
+      show:
+        back: 'Back'

@@ -5,5 +5,6 @@ class Admin::DashboardController < ApplicationController
   def index
     @categories = Category.all
     @assortments = Assortment.all
+    @products = Product.all
   end
 end

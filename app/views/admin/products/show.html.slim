@@ -1,0 +1,5 @@
+.block
+  .row-fluid id="product_#{@product.id}"
+    .span3= @product.name
+    .span6= @product.description
+p= link_to t('.back'), admin_root_path

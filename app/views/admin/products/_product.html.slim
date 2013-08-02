@@ -1,0 +1,6 @@
+.row-fluid id="product_#{product.id}"
+  .span2= link_to product.name, admin_product_path(product), action: :show
+  .span6= product.description
+  .span4
+    p= link_to t('.edit'), edit_admin_product_path(product), remote: true
+    p= link_to t('.delete'), admin_product_path(product), remote: true, method: 'delete'
