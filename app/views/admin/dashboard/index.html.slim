@@ -8,6 +8,9 @@
         p#no_categories= t('.no_categories')
     #add_category
       = link_to t('.add_category'), new_admin_category_path, remote: true
+    #paginator
+      =paginate @categories,  remote: true
+
   #assortments
     h3= t('.assortments_title')
     #assortments_list.block

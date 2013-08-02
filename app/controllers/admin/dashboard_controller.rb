@@ -3,7 +3,7 @@ class Admin::DashboardController < ApplicationController
   before_filter :is_admin?
 
   def index
-    @categories = Category.all
+    @categories = Category.order('name').page(params[:page]).per(5)
     @assortments = Assortment.all
   end
 end
