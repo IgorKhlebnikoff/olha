@@ -26,6 +26,7 @@ gem 'pry-rails'
 gem 'breadcrumbs_on_rails'
 gem 'activemerchant'
 gem 'tire'
+gem 'kaminari'
 
 group :test do
   gem 'rspec'

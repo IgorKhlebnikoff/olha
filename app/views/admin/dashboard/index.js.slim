@@ -1,0 +1,2 @@
+| $('#categories_list').html("#{j(render partial: '/admin/categories/category', collection: @categories)}");
+| $('#paginator').html("#{escape_javascript(paginate(@categories, :remote => true))}");
