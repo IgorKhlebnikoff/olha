@@ -1,0 +1,8 @@
+en:
+  searches:
+    index:
+      search_results: 'Search results:'
+      no_results: 'No results'
+    full_search_form:
+    found_in_categories: 
+      title: 'Found in categories:'

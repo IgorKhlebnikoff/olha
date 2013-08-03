@@ -1,0 +1,9 @@
+en:
+  admin:
+    categories:
+      form:
+        name: 'Name'
+      category:
+        edit: 'Edit'
+        delete: 'Delete'
+        

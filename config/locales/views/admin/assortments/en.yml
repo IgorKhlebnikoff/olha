@@ -1,0 +1,10 @@
+en:
+  admin:
+    assortments:
+      form:
+        name: 'Name'
+        cancel: 'Cancel'
+        save: 'Save'
+      assortment:
+        edit: 'Edit'
+        delete: 'Delete'

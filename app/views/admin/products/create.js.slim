@@ -1,0 +1,6 @@
+- if @product.valid?
+  | if ($('#no_products')) {
+  |   $('p#no_products').remove();
+  | }
+  | $('#products_list').append("#{j(render partial: 'product', locals: { product: @product })}");
+| $('#modal_window').modal('hide');

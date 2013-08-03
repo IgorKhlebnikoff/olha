@@ -14,3 +14,31 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require_tree .
+
+$(function() {
+  $(document).on('click', "#categories_list a[data-method='delete']", function() {
+    addWall('#categories_list');
+  });
+
+  $(document).on('submit', 'form#new_category', function() {
+    addWall('#categories_list');
+  })
+
+});
+
+sendRequest = function(url, type) {
+  $.ajax({
+    type: type,
+    url: url,
+  });
+}
+
+Popup = function() {}
+
+Popup.hideModal = function() {
+  $('#modal_window').modal('hide');
+}
+
+addWall = function(node) {
+  $(node).append('<div class="back-wall"><div>');
+}

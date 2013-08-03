@@ -8,8 +8,8 @@ Olha::Application.routes.draw do
     resources :products do
       resources :variants
     end
-    resources :categories, only: [:new, :create, :destroy]
-    resources :assortments, only: [:new, :create, :destroy]
+    resources :categories, except: [:show]
+    resources :assortments, except: [:show]
     resources :colors, only: [:new, :create, :destroy]
     resources :sizes, only: [:new, :create, :destroy]
     resources :currencies, only: [:new, :create, :destroy]

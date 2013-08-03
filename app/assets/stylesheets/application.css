@@ -9,9 +9,32 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require admin/dashboard
  *= require_tree .
  */
 
+.content-container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
 .translation_missing {
   border: 2px solid red;
+}
+
+.block {
+  background: #F2F2F2;
+  border: 2px solid grey;
+  border-radius: 5px 5px 5px 5px;
+  padding: 10px;
+}
+
+.back-wall {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1040;
+  background: url('ajax_loader.gif') no-repeat center;
 }
