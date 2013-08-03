@@ -4,12 +4,7 @@
     .row-fluid
       .span12= link_to t('.add_category'), new_admin_category_path, remote: true
     #categories_list.block
-      - if @categories.any?
-        = render partial: '/admin/categories/category', collection: @categories
-        #paginator
-          = paginate @categories, remote: true
-      - else
-        p#no_categories= t('.no_categories')
+      = render partial: '/admin/categories/categories'
 
   #assortments data-url="#{admin_assortments_path}"
     h3= t('.assortments_title')
