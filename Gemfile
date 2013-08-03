@@ -33,6 +33,10 @@ group :test do
   gem 'factory_girl'
   gem 'factory_girl_rails', require: false
   gem 'faker'
-  gem 'capybara', '1.1.2'
-  gem 'capybara-webkit'
+  gem 'capybara', ' ~> 2.0'
+# gem install capybara-webkit -v '0.7.2'
+# gem install capybara-webkit -v '0.8.0'
+# gem install capybara-webkit -v '0.9.0'
+
+  gem 'capybara-webkit', '1.0.0'
 end
