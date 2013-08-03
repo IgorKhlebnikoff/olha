@@ -3,8 +3,7 @@ class Admin::AssortmentsController < ApplicationController
   before_filter :categories, only: [:new, :edit]
 
   def index
-    @assortments = Kaminari.paginate_array(Assortment.all)
-      .page(current_page(params[:assortment_page])).per(Constants::PER_PAGE)
+    @assortments = DataFormater.new.paginate(Assortment, params[:assortment_page])
   end
 
   def new

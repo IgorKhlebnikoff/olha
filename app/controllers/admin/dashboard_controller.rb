@@ -3,8 +3,9 @@ class Admin::DashboardController < ApplicationController
   before_filter :is_admin?
 
   def index
-    @categories = Kaminari.paginate_array(Category.all).page(current_page(params[:category_page])).per(Constants::PER_PAGE)
-    @assortments = Kaminari.paginate_array(Assortment.all).page(current_page(params[:assortment_page])).per(Constants::PER_PAGE)
+    data_formater = DataFormater.new
+    @categories = data_formater.paginate(Category, params[:category_page])
+    @assortments = data_formater.paginate(Assortment, params[:assortment_page])
     @products = Product.all
   end
 end
