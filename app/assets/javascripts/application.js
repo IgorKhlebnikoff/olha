@@ -13,18 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require observers
 //= require_tree .
-
-$(function() {
-  $(document).on('click', "#categories_list a[data-method='delete']", function() {
-    addWall('#categories_list');
-  });
-
-  $(document).on('submit', 'form#new_category', function() {
-    addWall('#categories_list');
-  })
-
-});
 
 sendRequest = function(url, type) {
   $.ajax({

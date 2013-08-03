@@ -1,4 +1,7 @@
 .row-fluid
+  .span12
+    h4= title
+.row-fluid
   = form_for @category, url: url, method: method, remote: true, builder: StandartBuilder do |f|
     div= f.error_messages
     .row-fluid

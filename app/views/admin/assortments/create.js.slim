@@ -1,6 +1,2 @@
-- if @assortment.valid?
-  | if ($('#no_assortments')) {
-  |   $('p#no_assortments').hide();
-  | }
-  | $('#assortments_list').append("#{j(render partial: 'assortment', locals: { assortment: @assortment })}");
+| sendRequest("#{admin_assortments_path}", 'get');
 | $('#modal_window').modal('hide');

@@ -1,6 +1,6 @@
 - if @categories.any?
   = render partial: '/admin/categories/category', collection: @categories
   #paginator
-    = paginate @categories, remote: true
+    = paginate @categories, remote: true, param_name: 'category_page'
 - else
   p#no_categories= t('.no_categories')

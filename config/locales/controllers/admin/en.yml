@@ -3,3 +3,5 @@ en:
     application:
       no_admin_permissions: "Sorry, but You have no admin's permissions"
     admin:
+      assortments:
+        category_not_found: 'Category does not found!'

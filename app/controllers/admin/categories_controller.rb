@@ -2,7 +2,8 @@ class Admin::CategoriesController < ApplicationController
   before_filter :find_category, only: [:edit, :update, :destroy]
 
   def index
-    @categories = Kaminari.paginate_array(Category.all).page(current_page)
+    @categories = Kaminari.paginate_array(Category.all)
+      .page(current_page(params[:category_page])).per(Constants::PER_PAGE)
   end
 
   def new
@@ -23,11 +24,7 @@ class Admin::CategoriesController < ApplicationController
   end
 
   def destroy
-    if Assortment.find_by_category_id(@category.id)
-      render :index
-    else
-      @category.destroy
-    end
+    @category.destroy
   end
 
   private

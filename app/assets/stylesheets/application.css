@@ -38,3 +38,11 @@
   z-index: 1040;
   background: url('ajax_loader.gif') no-repeat center;
 }
+
+form {
+  margin: 0 !important;
+}
+
+.modal {
+  padding: 20px;
+}

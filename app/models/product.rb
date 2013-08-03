@@ -2,6 +2,8 @@ class Product < ActiveRecord::Base
   include Tire::Model::Search
   include Tire::Model::Callbacks
 
+  default_scope order('created_at DESC')
+
   has_many :variants, dependent: :destroy
   has_many :reviews, dependent: :destroy
 

@@ -1,9 +1,12 @@
 en:
   admin:
     categories:
+      new:
+        new: 'New category'
+      edit:
+        edit: 'Edit category'
       form:
         name: 'Name'
+      categories:
+        no_categories: 'No categories'
       category:
-        edit: 'Edit'
-        delete: 'Delete'
-        
