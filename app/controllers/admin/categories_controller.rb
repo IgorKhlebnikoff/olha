@@ -2,7 +2,7 @@ class Admin::CategoriesController < ApplicationController
   before_filter :find_category, only: [:edit, :update, :destroy]
 
   def index
-    @categories = Category.all
+    @categories = Kaminari.paginate_array(Category.all).page(current_page)
   end
 
   def new

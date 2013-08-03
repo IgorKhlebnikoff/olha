@@ -6,10 +6,10 @@
     #categories_list.block
       - if @categories.any?
         = render partial: '/admin/categories/category', collection: @categories
+        #paginator
+          = paginate @categories, remote: true
       - else
         p#no_categories= t('.no_categories')
-    #paginator
-      = paginate @categories, remote: true
 
   #assortments data-url="#{admin_assortments_path}"
     h3= t('.assortments_title')

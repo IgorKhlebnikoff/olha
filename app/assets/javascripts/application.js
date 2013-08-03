@@ -15,12 +15,15 @@
 //= require twitter/bootstrap
 //= require_tree .
 
-$(document).ready(function() {
-  $("#categories_list a[data-method='delete']").each(function(index, element) {
-    $(element).bind("ajax:beforeSend", function() {
-      $('#categories_list').append('<div class="back-wall"><div>');
-    });
+$(function() {
+  $(document).on('click', "#categories_list a[data-method='delete']", function() {
+    addWall('#categories_list');
   });
+
+  $(document).on('submit', 'form#new_category', function() {
+    addWall('#categories_list');
+  })
+
 });
 
 sendRequest = function(url, type) {
@@ -34,4 +37,8 @@ Popup = function() {}
 
 Popup.hideModal = function() {
   $('#modal_window').modal('hide');
+}
+
+addWall = function(node) {
+  $(node).append('<div class="back-wall"><div>');
 }

@@ -1,6 +1,2 @@
-- if @category.valid?
-  | if ($('#no_categories')) {
-  |   $('p#no_categories').hide();
-  | }
-  | $('#categories_list').append("#{j(render partial: 'category', locals: { category: @category })}");
+| sendRequest("#{admin_categories_path}", 'get');
 | $('#modal_window').modal('hide');
