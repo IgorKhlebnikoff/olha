@@ -1,0 +1,5 @@
+en:
+  reviews:
+    form:
+      review: 'Review:'
+      submit: 'Leave a Comment'

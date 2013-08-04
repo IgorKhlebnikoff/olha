@@ -2,7 +2,7 @@ class ReviewsController < ApplicationController
   before_filter :find_product
 
   def index
-    @reviews = @product.reviews
+    @reviews = @product.reviews.reverse
   end
 
   def new
@@ -10,11 +10,8 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    if @review = @product.reviews.create(params[:review].merge(user_id: current_user.id))
-      redirect_to @product
-    else
-      render @product
-   end
+    @review = @product.reviews.build(params[:review].merge(user_id: current_user.id))
+    render action: :new unless @review.save
   end
 
   def destroy

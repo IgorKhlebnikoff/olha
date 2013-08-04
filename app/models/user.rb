@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
 
   has_many :orders
   has_many :authentications, dependent: :destroy
+  has_many :left_reviews, class_name: 'Review', foreign_key: 'user_id'
 
   belongs_to :role
 

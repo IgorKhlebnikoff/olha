@@ -1,4 +1,5 @@
 en:
   products:
     show:
+      back_to_products: 'Back to products'
       submit: 'Leave comment'

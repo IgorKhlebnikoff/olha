@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require observers
+//= require data_getters
+//= require reviews
 //= require_tree .
 
 sendRequest = function(url, type) {
