@@ -4,6 +4,6 @@ class Profile < ActiveRecord::Base
   attr_accessible :first_name, :last_name, :phone_number, :gender, :user_id
 
   def full_name
-    "#{last_name} #{first_name}"
+    [first_name, last_name].compact.join(' ')
   end
 end

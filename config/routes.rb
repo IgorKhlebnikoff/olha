@@ -16,7 +16,7 @@ Olha::Application.routes.draw do
   end
 
   resources :products, only: [:index, :show] do
-    resources :reviews, only: [:index, :new, :create, :destroy],  defaults: { format: 'json' }
+    resources :reviews, only: [:index, :new, :create, :destroy]
   end
 
   resources :wishes
