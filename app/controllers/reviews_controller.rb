@@ -10,7 +10,11 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    @review = @product.reviews.create(params[:review])
+    if @review = @product.reviews.create(params[:review])
+      redirect_to @product
+    else
+      render @product
+   end
   end
 
   def destroy

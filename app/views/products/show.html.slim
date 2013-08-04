@@ -1,0 +1,13 @@
+.block
+  .row-fluid id="product_#{@product.id}"
+    .span3= @product.name
+    .span6= @product.description
+.row-fluid#comments
+  = form_for @review, url: product_reviews_path(@product) do |f|
+    = f.label :review
+    = f.text_area :body, rows: 4, class: "span8"
+    p
+      = f.submit t('.submit'), class: "btn"
+.row-fluid
+  = render partial: "review", collection: @reviews, as: :review
+p= link_to t('.back'), admin_root_path

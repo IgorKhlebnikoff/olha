@@ -7,6 +7,8 @@ class ProductsController < ApplicationController
 
   def show
     @variants = @product.variants
+    @reviews  = @product.reviews.where("id is not null").reverse
+    @review   = @product.reviews.build
   end
 
   private
