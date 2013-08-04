@@ -10,7 +10,7 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    if @review = @product.reviews.create(params[:review])
+    if @review = @product.reviews.create(params[:review].merge(user_id: current_user.id))
       redirect_to @product
     else
       render @product
