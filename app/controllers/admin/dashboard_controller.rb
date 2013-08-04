@@ -6,6 +6,6 @@ class Admin::DashboardController < ApplicationController
     data_formater = DataFormater.new
     @categories = data_formater.paginate(Category, params[:category_page])
     @assortments = data_formater.paginate(Assortment, params[:assortment_page])
-    @products = Product.all
+    @products = data_formater.paginate(Product, params[:product_page])
   end
 end

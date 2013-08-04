@@ -18,7 +18,4 @@
     .row-fluid
       .span12= link_to t('.add_product'),  new_admin_product_path, remote: true
     #products_list.block
-      - if @products.any?
-        = render partial: '/admin/products/product', collection: @products
-      - else
-        p#no_products= t('.no_products')
+      = render partial: 'admin/products/products'

@@ -3,7 +3,11 @@ class Admin::ProductsController < ApplicationController
   before_filter :all_assortments, only: [:new, :edit]
 
   def index
-    @products = Product.all
+    @products = DataFormater.new.paginate(Product, params[:product_page])
+    respond_to do |format|
+      format.html
+      format.js { render layout: false }
+    end
   end
 
   def new

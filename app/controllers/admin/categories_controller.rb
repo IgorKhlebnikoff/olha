@@ -31,5 +31,4 @@ class Admin::CategoriesController < ApplicationController
   def find_category
     @category = Category.find_by_id(params[:id])
   end
-
 end
