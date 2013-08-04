@@ -16,6 +16,8 @@ class User < ActiveRecord::Base
 
   delegate :first_name, :last_name, :phone_number, :gender, :full_name, to: :profile
 
+  after_create :build_profile
+
   def is_admin?
     role_id == Role.find_by_name('admin').id
   end
@@ -27,5 +29,9 @@ class User < ActiveRecord::Base
 
   def password_required?
     (authentications.empty? || !password.blank?) && super
+  end
+
+  def user_profile
+    self.build_profile
   end
 end
