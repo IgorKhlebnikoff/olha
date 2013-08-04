@@ -4,6 +4,6 @@ module ApplicationHelper
   end
 
   def flash_class(type)
-    ALERT_TYPES[type]
+    Constants::ALERT_TYPES[type]
   end
 end

@@ -30,7 +30,7 @@ class Admin::ProductsController < ApplicationController
     @product = Product.find_by_id(params[:id])
   end
   
-   def all_assortments
-      @assortments = Assortment.all
+  def all_assortments
+    @assortments = Assortment.all
   end
 end
