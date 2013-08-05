@@ -19,7 +19,7 @@ Olha::Application.routes.draw do
     resources :reviews, only: [:index, :new, :create, :destroy]
   end
 
-  resources :profiles, only: [:new, :show, :edit]
+  resources :profiles, only: [:show, :edit, :update]
   resources :wishes
   resources :carts
   resources :orders

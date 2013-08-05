@@ -9,6 +9,6 @@ class ApplicationController < ActionController::Base
   end
 
   def check_profile
-    redirect_to new_profile_path if (current_user && !current_user.full_name)
+    redirect_to edit_profile_path(current_user.profile.id) if (current_user && current_user.full_name.empty?)
   end
 end

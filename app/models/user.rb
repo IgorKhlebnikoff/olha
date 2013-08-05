@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
 
   delegate :first_name, :last_name, :phone_number, :gender, :full_name, to: :profile
 
-  after_create :build_profile
+  after_create :create_profile
 
   def is_admin?
     role_id == Role.find_by_name('admin').id
@@ -31,7 +31,8 @@ class User < ActiveRecord::Base
     (authentications.empty? || !password.blank?) && super
   end
 
-  def user_profile
-    self.build_profile
+  def create_profile
+    profile = Profile.new(user_id: id)
+    profile.save(validate: false)
   end
 end
