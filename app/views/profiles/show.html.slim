@@ -1,0 +1,29 @@
+.block
+  .row-fluid
+    .span3
+      | First Name
+    .span3
+      = @profile.first_name
+  .row-fluid
+    .span3
+      | Last Name
+    .span3
+      = @profile.last_name
+  .row-fluid
+    .span3
+      | Phone Number
+    .span3
+      = "(+#{@code}) #{@profile.phone_number}"
+  .row-fluid
+    .span3
+      | Gender
+    .span3
+      = @profile.gender
+  .row-fluid
+    .span3
+      | Country
+    .span3
+      = "#{@country}"
+  .row-fluid
+    =link_to 'Edit', edit_profile_path(@profile), class: 'btn btn-success'
+        
