@@ -2,13 +2,13 @@ require 'spec_helper'
 
 describe Profile do
 
+  let(:profile) { FactoryGirl.create(:profile) }
+
   context 'associations' do
     it { should belong_to :user }
   end
 
   context 'created profile must has require fields' do
-
-    let(:profile) { FactoryGirl.create(:profile) }
 
     it 'first_name must be present' do
       expect(profile.first_name.empty?).to be_false
@@ -82,4 +82,11 @@ describe Profile do
       expect(profile).to_not be_valid
     end
   end
+
+  context 'full_name should be first_name+last_name' do
+    it 'full_name' do
+      expect(profile.full_name).to eq("#{profile.first_name} #{profile.last_name}")    
+    end
+  end
+
 end
