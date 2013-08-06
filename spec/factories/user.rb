@@ -7,7 +7,6 @@ FactoryGirl.define do
 
   factory :user_with_profile, parent: :user do
     after(:create) do |user|
-      # FactoryGirl.create(:profile, user: user)
       user.profile.update_attributes(first_name: 'Oleg',
                                     last_name: 'Sobchuk', 
                                     phone_number: '0930592359', 

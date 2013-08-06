@@ -1,5 +1,5 @@
 class ProfilesController < ApplicationController
-  skip_before_filter :check_profile, only: [:show, :edit, :update]
+  skip_before_filter :check_profile, only: [:edit, :update]
   before_filter :find_profile
 
   def show
