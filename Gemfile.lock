@@ -56,6 +56,11 @@ GEM
     capybara-webkit (0.13.0)
       capybara (>= 1.0.0, < 1.2)
       json
+    carmen (1.0.0)
+      unicode_utils (~> 1.4.0)
+    carmen-rails (1.0.0)
+      carmen (~> 1.0.0.beta2)
+      rails
     carrierwave (0.9.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -71,6 +76,9 @@ GEM
       execjs
     coffee-script-source (1.6.3)
     commonjs (0.2.6)
+    countries (0.9.2)
+      currencies (>= 0.4.0)
+    currencies (0.4.2)
     database_cleaner (1.1.1)
     devise (3.0.1)
       bcrypt-ruby (~> 3.0)
@@ -233,15 +241,15 @@ GEM
     treetop (1.4.14)
       polyglot
       polyglot (>= 0.3.1)
-    twitter-bootstrap-rails (2.2.7)
+    twitter-bootstrap-rails (2.2.6)
       actionpack (>= 3.1)
       execjs
-      rails (>= 3.1)
       railties (>= 3.1)
     tzinfo (0.3.37)
     uglifier (2.1.2)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    unicode_utils (1.4.0)
     warden (1.2.3)
       rack (>= 1.0)
     websocket (1.0.7)
@@ -257,8 +265,11 @@ DEPENDENCIES
   breadcrumbs_on_rails
   capybara (= 1.1.2)
   capybara-webkit
+  carmen
+  carmen-rails
   carrierwave
   coffee-rails (~> 3.2.1)
+  countries
   database_cleaner
   devise
   factory_girl
@@ -281,5 +292,5 @@ DEPENDENCIES
   slim
   therubyracer
   tire
-  twitter-bootstrap-rails (>= 2.2.6)
+  twitter-bootstrap-rails (= 2.2.6)
   uglifier (>= 1.0.3)

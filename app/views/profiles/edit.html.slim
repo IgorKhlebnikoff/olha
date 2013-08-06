@@ -1,0 +1,16 @@
+= render 'errors'
+.block
+  .row-fluid
+    = form_for @profile, url: profile_path, builder: StandartBuilder do |f|
+      = f.label :first_name
+      = f.text_field :first_name
+      = f.label :last_name
+      = f.text_field :last_name
+      = f.label :phone_number
+      = f.telephone_field :phone_number
+      = f.label :gender
+      = f.select :gender, options_for_select(%w[Male Female])
+      = f.label :country
+      = f.country_select :country, {priority: %w(UA RU BY)}, prompt: 'select'
+      p
+        = f.submit

@@ -14,7 +14,7 @@ gem 'slim'
 gem 'less'
 gem 'less-rails'
 gem 'therubyracer'
-gem 'twitter-bootstrap-rails', '>= 2.2.6'
+gem 'twitter-bootstrap-rails', '2.2.6'
 gem 'kaminari'
 gem 'carrierwave'
 gem 'acts_as_votable', '~> 0.5.0'
@@ -27,6 +27,9 @@ gem 'breadcrumbs_on_rails'
 gem 'activemerchant'
 gem 'tire'
 gem 'kaminari'
+gem 'countries'
+gem "carmen"
+gem 'carmen-rails'
 
 group :test do
   gem 'rspec'
