@@ -7,9 +7,6 @@ class ProfilesController < ApplicationController
     @country = Carmen::Country.coded(@profile.country).name
   end
 
-  def edit
-  end
-
   def update
     @profile.update_attributes(params[:profile])
     if @profile.save

@@ -2,9 +2,7 @@ require 'spec_helper'
 
 describe ProfilesController do
   let(:user) { FactoryGirl.create(:user_with_profile) }
-  let(:user_just_create) { FactoryGirl.create(:user) }
   let(:profile) { user.profile }
-  let(:profile_just_create_user) { user_just_create.profile }
 
   before(:each) do
     controller.stub(:current_user).and_return(user)
@@ -13,16 +11,18 @@ describe ProfilesController do
 
   context '#show' do
     before { get :show, id: profile }
+
     it { expect(response).to render_template('show') }
     it { expect(assigns(@profile)).to_not be_empty }
+    it { expect(assigns(@code)).to_not be_empty }
+    it { expect(assigns(@country)).to_not be_empty }
   end
 
-  context '#show whis nil params' do
+  context '#show with nil params' do
     let(:user) { FactoryGirl.create(:user) }
     let(:profile) { user.profile }
-    before do
-      get :show, id: profile
-    end
+
+    before { get :show, id: profile }
 
     it { expect(response).to redirect_to edit_profile_path(profile) }
     it { expect(assigns(@profile)).to_not be_empty }
@@ -34,61 +34,44 @@ describe ProfilesController do
 
     it { expect(response).to render_template('edit') }
     it { expect(assigns(@profile)).to_not be_empty }
-    
   end
 
   describe '#update' do
 
     context 'response' do
       let(:true_attributes) { FactoryGirl.attributes_for(:profile) } 
+
       before { put :update, id: profile, profile: true_attributes }
+
       it { expect(response.status).to eq(302) }
       it { expect(assigns(@profile)).to_not be_empty }
     end
 
-    context 'nil first_name' do
-      before do
+    context 'failure if set' do
+      after do
+        profile.reload
+        response.should render_template 'edit'
+      end
+
+      it 'wrong first_name' do
         put :update, id: profile, profile: FactoryGirl.attributes_for(:profile, first_name: nil)
-        profile.reload
       end
-      it { expect(profile.first_name).to eq("#{profile.first_name}") }
-      it { response.should render_template 'edit' }
-    end
 
-    context 'nil last_name' do
-      before do
+      it 'wrong last_name' do
         put :update, id: profile, profile: FactoryGirl.attributes_for(:profile, last_name: nil)
-        profile.reload
       end
-      it { expect(profile.last_name).to eq("#{profile.last_name}") }
-      it { response.should render_template 'edit' }
-    end
 
-    context 'nil phone_number' do
-      before do
+      it 'wrong phone_number' do
         put :update, id: profile, profile: FactoryGirl.attributes_for(:profile, phone_number: nil)
-        profile.reload
       end
-      it { expect(profile.phone_number).to eq("#{profile.phone_number}") }
-      it { response.should render_template 'edit' }
-    end
 
-    context 'nil gender' do
-      before do
+      it 'wrong gender' do
         put :update, id: profile, profile: FactoryGirl.attributes_for(:profile, gender: nil)
-        profile.reload
       end
-      it { expect(profile.gender).to eq("#{profile.gender}") }
-      it { response.should render_template 'edit' }
-    end
 
-    context 'nil country' do
-      before do
+      it 'wrong country' do
         put :update, id: profile, profile: FactoryGirl.attributes_for(:profile, country: nil)
-        profile.reload
       end
-      it { expect(profile.country).to eq("#{profile.country}") }
-      it { response.should render_template 'edit' }
     end
   end
 end

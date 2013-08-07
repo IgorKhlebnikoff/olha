@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe Profile do
-
   let(:profile) { FactoryGirl.create(:profile) }
 
   context 'associations' do
@@ -9,7 +8,6 @@ describe Profile do
   end
 
   context 'created profile must has require fields' do
-
     it 'first_name must be present' do
       expect(profile.first_name.empty?).to be_false
     end
@@ -31,62 +29,61 @@ describe Profile do
     end
   end
 
-  context 'validation' do
+  describe 'validation' do
     let(:profile) { FactoryGirl.build(:profile) }
-    it 'should be valid' do
-      expect(profile).to be_valid
+    
+    context '#with valid params' do
+      it 'should be valid' do
+        expect(profile).to be_valid
+      end
     end
 
-    it 'nil first_name should not be valid' do
-      profile.first_name = nil
-      expect(profile).to_not be_valid
-    end
+    context '#with not valid params' do
+      after { expect(profile).to_not be_valid }
 
-    it '1 char first_name should not be valid' do
-      profile.first_name = 'a'
-      expect(profile).to_not be_valid
-    end
+      it 'nil first_name should not be valid' do
+        profile.first_name = nil
+        expect(profile).to_not be_valid
+      end
 
-    it 'nil last_name should not be valid' do
-      profile.last_name = nil
-      expect(profile).to_not be_valid
-    end
+      it ':1 char first_name should not be valid' do
+        profile.first_name = 'a'
+      end
 
-    it '1 char last_name should not be valid' do
-      profile.last_name = 'a'
-      expect(profile).to_not be_valid
-    end
+      it ':nil last_name should not be valid' do
+        profile.last_name = nil
+      end
 
-    it 'nil phone_number should not be valid' do
-      profile.phone_number = nil
-      expect(profile).to_not be_valid
-    end
+      it ':1 char last_name should not be valid' do
+        profile.last_name = 'a'
+      end
 
-    it 'char phone_number should not be valid' do
-      profile.phone_number = 'aksjaksjaksjaks'
-      expect(profile).to_not be_valid
-    end
+      it ':nil phone_number should not be valid' do
+        profile.phone_number = nil
+      end
 
-    it 'nil gender should not be valid' do
-      profile.gender = nil
-      expect(profile).to_not be_valid
-    end
+      it ':char phone_number should not be valid' do
+        profile.phone_number = 'aksjaksjaksjaks'
+      end
 
-    it 'wrong gender should not be valid' do
-      profile.gender = 'child'
-      expect(profile).to_not be_valid
-    end
+      it ':nil gender should not be valid' do
+        profile.gender = nil
+      end
 
-    it 'nil country should not be valid' do
-      profile.country = nil
-      expect(profile).to_not be_valid
+      it ':wrong gender should not be valid' do
+        profile.gender = 'child'
+      end
+
+      it ':nil country should not be valid' do
+        profile.country = nil
+      end
     end
   end
 
-  context 'full_name should be first_name+last_name' do
+  context '#full_name should be "first_name last_name"' do
     it 'full_name' do
       expect(profile.full_name).to eq("#{profile.first_name} #{profile.last_name}")    
     end
   end
-
 end
+
