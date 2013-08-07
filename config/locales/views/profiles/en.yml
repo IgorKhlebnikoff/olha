@@ -1,0 +1,16 @@
+en:
+  profiles:
+    show:
+      first_name: 'First Name'
+      last_name: 'Last Name'
+      phone_number: 'Phone Number'
+      gender: 'Gender'
+      country: 'Country'
+      edit: 'Edit'
+    edit:
+      first_name: 'First Name'
+      last_name: 'Last Name'
+      phone_number: 'Phone Number'
+      gender: 'Gender'
+      country: 'Country'
+      
