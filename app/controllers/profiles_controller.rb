@@ -1,13 +1,10 @@
 class ProfilesController < ApplicationController
-  skip_before_filter :check_profile, only: [:show, :edit, :update]
+  skip_before_filter :check_profile, only: [:edit, :update]
   before_filter :find_profile
 
   def show
     @code = Country.find_country_by_alpha2(@profile.country).country_code
     @country = Carmen::Country.coded(@profile.country).name
-  end
-
-  def edit
   end
 
   def update
