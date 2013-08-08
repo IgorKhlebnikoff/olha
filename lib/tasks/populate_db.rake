@@ -10,7 +10,7 @@ namespace :db do
 
     currencies = %w(USD UAH)
     currencies.each do |name|
-      Currency.find_or_create(name: name)
+      Currency.find_or_create_by_name(name)
     end
 
     Size.populate 10 do |size|

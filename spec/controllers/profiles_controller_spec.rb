@@ -46,8 +46,8 @@ describe ProfilesController do
       before { put :update, id: profile, profile: true_attributes }
 
       it { expect(response.status).to eq(302) }
-    it { expect(assigns(:profile)).to_not be_nil }
-    it { expect(assigns(:profile)).to be_kind_of(Profile) }
+      it { expect(assigns(:profile)).to_not be_nil }
+      it { expect(assigns(:profile)).to be_kind_of(Profile) }
     end
 
     context 'invalod attributes' do

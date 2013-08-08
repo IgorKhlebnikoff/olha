@@ -1,7 +1,7 @@
 class Price < ActiveRecord::Base
-  has_one :currency
+  belongs_to :currency
 
-  has_many :variants, dependent: :destroy
+  belongs_to :variant
 
   attr_accessible :amount, :currency_id
 
