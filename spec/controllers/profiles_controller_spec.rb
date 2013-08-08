@@ -13,9 +13,10 @@ describe ProfilesController do
     before { get :show, id: profile }
 
     it { expect(response).to render_template('show') }
-    it { expect(assigns(@profile)).to_not be_empty }
-    it { expect(assigns(@code)).to_not be_empty }
-    it { expect(assigns(@country)).to_not be_empty }
+    it { expect(assigns(:profile)).to_not be_nil }
+    it { expect(assigns(:profile)).to be_kind_of(Profile) }
+    it { expect(assigns(:code)).to_not be_empty }
+    it { expect(assigns(:country)).to_not be_empty }
   end
 
   context '#show with nil params' do
@@ -25,7 +26,7 @@ describe ProfilesController do
     before { get :show, id: profile }
 
     it { expect(response).to redirect_to edit_profile_path(profile) }
-    it { expect(assigns(@profile)).to_not be_empty }
+    it { expect(assigns(:profile)).to be_nil }
   end
 
   context '#edit' do
@@ -33,7 +34,8 @@ describe ProfilesController do
     before { get :edit, id: profile }
 
     it { expect(response).to render_template('edit') }
-    it { expect(assigns(@profile)).to_not be_empty }
+    it { expect(assigns(:profile)).to_not be_nil }
+    it { expect(assigns(:profile)).to be_kind_of(Profile) }
   end
 
   describe '#update' do
@@ -44,32 +46,33 @@ describe ProfilesController do
       before { put :update, id: profile, profile: true_attributes }
 
       it { expect(response.status).to eq(302) }
-      it { expect(assigns(@profile)).to_not be_empty }
+    it { expect(assigns(:profile)).to_not be_nil }
+    it { expect(assigns(:profile)).to be_kind_of(Profile) }
     end
 
-    context 'failure if set' do
+    context 'invalod attributes' do
       after do
         profile.reload
         response.should render_template 'edit'
       end
 
-      it 'wrong first_name' do
+      it 'should render template edit if first_name is nil' do
         put :update, id: profile, profile: FactoryGirl.attributes_for(:profile, first_name: nil)
       end
 
-      it 'wrong last_name' do
+      it 'should render template edit if last_name is nil' do
         put :update, id: profile, profile: FactoryGirl.attributes_for(:profile, last_name: nil)
       end
 
-      it 'wrong phone_number' do
+      it 'should render template edit if phone_number is nil' do
         put :update, id: profile, profile: FactoryGirl.attributes_for(:profile, phone_number: nil)
       end
 
-      it 'wrong gender' do
+      it 'should render template edit if gender is nil' do
         put :update, id: profile, profile: FactoryGirl.attributes_for(:profile, gender: nil)
       end
 
-      it 'wrong country' do
+      it 'should render template edit if country is nil' do
         put :update, id: profile, profile: FactoryGirl.attributes_for(:profile, country: nil)
       end
     end
