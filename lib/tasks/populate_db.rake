@@ -1,21 +1,23 @@
 require 'csv'
 
 namespace :db do
-  desc "Erase and fill database with necessery info"
-  task :populate => :environment do
+  desc 'Erase and fill database with necessery info'
+  task populate: :environment do
     require 'populator'
     require 'faker'
 
     [Currency, Size, Category, Assortment, Color, Product, Variant].each(&:delete_all)
 
-    Currency.create!(:name => 'USD')
-    Currency.create!(:name => 'UAH')
+    currencies = %w(USD UAH)
+    currencies.each do |name|
+      Currency.find_or_create(name: name)
+    end
 
     Size.populate 10 do |size|
       size.name = 10 + size.id
     end
     
-    CSV.foreach('lib/tasks/colors.csv', headers: true, header_converters: :symbol) do |row|
+    CSV.foreach('lib/sources/colors.csv', headers: true, header_converters: :symbol) do |row|
       Color.find_or_create_by_name(name: row[:value])
     end
 
@@ -31,18 +33,14 @@ namespace :db do
           product.description = "description of product #{category.id}"
           product.assortment_id = assortment.id
           
-            Variant.populate 1 do |variant|
-              variant.product_id = product.id
-              variant.color_id = Color.first(order: "RANDOM()")
-              variant.size_id = Size.first(order: "RANDOM()")
-              variant.quantity = 99
-            end
+          Variant.populate 1 do |variant|
+            variant.product_id = product.id
+            variant.color_id = Color.first(order: 'RANDOM()')
+            variant.size_id = Size.first(order: 'RANDOM()')
+            variant.quantity = 99
+          end
         end
-
       end
     end
-
-
-
   end
 end
