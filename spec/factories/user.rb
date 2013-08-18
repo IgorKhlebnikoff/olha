@@ -10,4 +10,8 @@ FactoryGirl.define do
       user.profile.update_attributes(first_name: 'Oleg', last_name: 'Sobchuk', phone_number: '0930592359', gender: 'Male', country: 'UA')
     end
   end
+
+  factory :admin, parent: :user do
+    association :role
+  end
 end 

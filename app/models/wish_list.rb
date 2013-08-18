@@ -1,9 +1,8 @@
 class WishList < ActiveRecord::Base
-  has_many :variants
-
   belongs_to :user
+  belongs_to :wish, class_name: 'Variant'
 
-  attr_accessible :user_id
+  attr_accessible :user, :wish
 
-  validates :user_id, presence: true
+  validates :wish_id, uniqueness: { scope: :user_id }
 end

@@ -4,8 +4,9 @@ class User < ActiveRecord::Base
 
   has_one :profile, dependent: :destroy
   has_one :bag, dependent: :destroy
-  has_one :wish_list, dependent: :destroy
 
+  has_many :wishes, through: :wish_lists, source: :wish
+  has_many :wish_lists
   has_many :orders
   has_many :authentications, dependent: :destroy
   has_many :left_reviews, class_name: 'Review', foreign_key: 'user_id'
@@ -30,6 +31,8 @@ class User < ActiveRecord::Base
   def password_required?
     (authentications.empty? || !password.blank?) && super
   end
+
+  private
 
   def create_profile
     profile = Profile.new(user_id: id)

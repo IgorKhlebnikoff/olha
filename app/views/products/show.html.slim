@@ -1,9 +1,14 @@
 .row-fluid
   .span12= link_to t('.back_to_products'), products_path
-.block
-  .row-fluid id="product_#{@product.id}"
-    .span3= @product.name
-    .span6= @product.description
+.row-fluid
+  .span9.block
+    .row-fluid id="product_#{@product.id}"
+        .row-fluid
+          .span3= @product.name
+          .span6= @product.description
+  .span3.block
+    .row-fluid
+      .span12= link_to t('.to_wishes'), wish_add_path(@variants.first), remote: true
 .row-fluid#new_comment_form
   = render partial: '/reviews/form'
 .row-fluid#comments data-url="#{product_reviews_path(@product)}"

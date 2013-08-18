@@ -1,0 +1,9 @@
+en:
+  lib:
+    wishes:
+      add:
+        success: "You have added %{name} to wishes."
+        exists: "You already have %{name} in your wishes."
+      remove:
+        success: 'Wish was successefully removed.'
+        error: 'You do not have this product in your wishes.'

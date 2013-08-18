@@ -28,8 +28,9 @@ gem 'activemerchant'
 gem 'tire'
 gem 'kaminari'
 gem 'countries'
-gem "carmen"
+gem 'carmen'
 gem 'carmen-rails'
+gem 'populator'
 
 group :test do
   gem 'rspec'
@@ -40,9 +41,7 @@ group :test do
   gem 'factory_girl_rails', require: false
   gem 'faker'
   gem 'capybara', ' ~> 2.0'
-# gem install capybara-webkit -v '0.7.2'
-# gem install capybara-webkit -v '0.8.0'
-# gem install capybara-webkit -v '0.9.0'
-
   gem 'capybara-webkit', '1.0.0'
+  gem 'rspec-mocks'
+  gem 'database_cleaner'
 end

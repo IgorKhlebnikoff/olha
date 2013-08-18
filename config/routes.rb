@@ -1,5 +1,5 @@
 Olha::Application.routes.draw do
-  devise_for :users, controllers: { :registrations => 'registrations' }
+  devise_for :users, controllers: { registrations: 'registrations' }
 
   match '/auth/:provider/callback' => 'authentications#create'
 
@@ -20,7 +20,10 @@ Olha::Application.routes.draw do
   end
 
   resources :profiles, only: [:show, :edit, :update]
-  resources :wishes
+  resources :wishes, only: [:index] do
+    get :add
+    get :remove
+  end
   resources :carts
   resources :orders
 

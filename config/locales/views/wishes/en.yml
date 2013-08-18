@@ -1,0 +1,8 @@
+en:
+  wishes:
+    index:
+      title: 'List of my wishes:'
+      no_wishes: 'No wishes.'
+    wish:
+      add_to_order: 'Add to Order'
+      delete: 'Delete from Wishes'
