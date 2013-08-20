@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
   before_filter :find_product, only: [:show]
 
   def index
-    @products = Product.all
+    @products = DataFormater.new.paginate(Product, params[:product_page])
   end
 
   def show
