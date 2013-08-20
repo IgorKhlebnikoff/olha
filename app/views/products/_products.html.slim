@@ -1,0 +1,6 @@
+- if @products.any?
+  = render partial: 'product', collection: @products
+  #paginator
+    = paginate @products, remote: true, param_name: 'product_page'
+- else
+  p#no_products= t('.no_products')

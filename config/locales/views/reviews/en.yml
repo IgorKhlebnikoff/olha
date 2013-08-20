@@ -1,5 +1,11 @@
 en:
   reviews:
-    form:
-      review: 'Review:'
+    reviews:
+      review: 'Review'
+      ask: 'Ask Question'
+      new_review: 'Create Review'
       submit: 'Leave a Comment'
+    new_review:
+      review: 'New Review Form'
+      submit: 'Send Review'
+
