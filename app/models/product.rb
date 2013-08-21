@@ -9,6 +9,8 @@ class Product < ActiveRecord::Base
 
   belongs_to :assortment
 
+  ajaxful_rateable stars: 5, dimensions: [:quality], allow_update: true
+
   attr_accessible :name, :description, :assortment_id
 
   def paypal_url(return_url) 

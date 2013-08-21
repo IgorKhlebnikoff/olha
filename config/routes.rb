@@ -16,6 +16,9 @@ Olha::Application.routes.draw do
   end
 
   resources :products, only: [:index, :show] do
+    member do
+      post 'rate'
+    end
     resources :reviews, only: [:index, :new, :create, :destroy]
   end
 
@@ -27,7 +30,7 @@ Olha::Application.routes.draw do
   resources :carts
   resources :orders
 
-  resources :searches, :only => [:index] do
+  resources :searches, only: [:index] do
     collection do
       get :autocomplete
     end

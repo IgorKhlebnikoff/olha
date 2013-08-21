@@ -13,6 +13,8 @@ class User < ActiveRecord::Base
 
   belongs_to :role
 
+  ajaxful_rater
+
   attr_accessible :email, :password, :password_confirmation, :remember_me, :role_id
 
   delegate :first_name, :last_name, :phone_number, :gender, :full_name, to: :profile

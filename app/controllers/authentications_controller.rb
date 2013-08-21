@@ -1,6 +1,6 @@
 class AuthenticationsController < ApplicationController
   def create
-    auth = request.env["omniauth.auth"]
+    auth = request.env['omniauth.auth']
     authentication = Authentication.find_by_provider_and_uid(auth['provider'], auth['uid'])
     if authentication
       flash[:notice] = I18n.t('controllers.authentications.signed')

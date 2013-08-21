@@ -1,4 +1,4 @@
-.row-fluid
+.row-fluid#product
   = form_for @review, url: product_reviews_path(@product), remote: true, builder: StandartBuilder do |f|
     .row-fluid
       = f.error_messages
@@ -6,6 +6,8 @@
       .span12= f.label t('.review')
     .row-fluid
       .span12= f.text_area :body, rows: 4, class: 'span11'
+    .row-fluid
+      .span12= ratings_for @product
     .row-fluid
       .span4.offset4= f.submit t('.submit'), class: 'btn btn-success'
       .pull-right
