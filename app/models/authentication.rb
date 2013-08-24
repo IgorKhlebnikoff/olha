@@ -5,7 +5,7 @@ class Authentication < ActiveRecord::Base
 
   def provider_name
     if provider == 'open_id'
-      "OpenID"
+      'OpenID'
     else
       provider.titleize
     end
