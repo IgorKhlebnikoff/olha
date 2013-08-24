@@ -1,11 +1,10 @@
 class Search
-  def initialize(search_params)
-    @text = search_params[:term]
-    @filter = search_params[:filter_by]
-    @sort = search_params[:sort_by]
+  def initialize(model, term)
+    @text = term
+    @model = model
   end
 
-  def perform
-    
+  def execute
+    @model.search(@term).results
   end
 end

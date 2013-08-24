@@ -1,5 +1,5 @@
 div.top-search-panel
-  = form_for :search, url: searches_path do |f|
+  = form_for :term, url: searches_path do |f|
     = f.text_field :term
     = f.submit t('search')
 
