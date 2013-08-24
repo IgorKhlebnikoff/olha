@@ -11,6 +11,14 @@ class ProductsController < ApplicationController
     @review   = @product.reviews.new
   end
 
+  def rate
+    @product.rate(params[:stars], current_user, params[:dimension])
+    render :show do |page|
+      page.replace_html @product.wrapper_dom_id(params), ratings_for(@product, params.merge(wrap: false))
+      page.visual_effect :highlight, @product.wrapper_dom_id(params)
+    end
+  end
+
   private
 
   def find_product

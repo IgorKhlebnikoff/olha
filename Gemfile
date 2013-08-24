@@ -31,6 +31,7 @@ gem 'countries'
 gem 'carmen'
 gem 'carmen-rails'
 gem 'populator'
+gem 'ajaxful_rating', '~> 3.0.0.beta8'
 
 group :test do
   gem 'rspec'
