@@ -1,6 +1,7 @@
+require 'rails_helper'
 require 'spec_helper'
 
-describe Profile do
+RSpec.describe Profile, :type => :model do
   let(:profile) { FactoryGirl.create(:profile) }
 
   context 'associations' do
@@ -9,15 +10,15 @@ describe Profile do
 
   context 'created profile must has require fields' do
     it 'first_name must be present' do
-      expect(profile.first_name.empty?).to be_false
+      expect(profile.first_name.empty?).to be false
     end
 
     it 'last_name must be present' do
-      expect(profile.last_name.empty?).to be_false
+      expect(profile.last_name.empty?).to be false
     end
 
     it 'phone_number must be present' do
-      expect(profile.phone_number.empty?).to be_false
+      expect(profile.phone_number.empty?).to be false
     end
 
     it 'gender must be present' do

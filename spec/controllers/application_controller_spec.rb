@@ -1,6 +1,7 @@
+require 'rails_helper'
 require 'spec_helper'
 
-describe ProfilesController do
+RSpec.describe ProfilesController, :type => :controller do
   let(:user) { FactoryGirl.create(:user_with_profile) }
   let(:profile) { user.profile }
 

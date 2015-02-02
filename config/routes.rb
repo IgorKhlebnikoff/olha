@@ -1,7 +1,7 @@
 Olha::Application.routes.draw do
   devise_for :users, controllers: { registrations: 'registrations' }
 
-  match '/auth/:provider/callback' => 'authentications#create'
+  match '/auth/:provider/callback' => 'authentications#create', via: [:get, :post]
 
   namespace :admin do
     root to: 'dashboard#index'

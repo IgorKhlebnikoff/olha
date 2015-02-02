@@ -1,4 +1,5 @@
-require 'spec_helper' 
+require 'spec_helper'
+
 
 describe Wish do
   let!(:user) { FactoryGirl.create(:user_with_profile) }
@@ -24,7 +25,7 @@ describe Wish do
       context 'invalid params' do
         it 'returns false' do
           subject.push(variant)
-          expect(subject.push(variant)[:result]).to be_false
+          expect(subject.push(variant)[:result]).to be false
         end
       end
     end
@@ -32,11 +33,11 @@ describe Wish do
     describe 'delete' do
       it 'delete wish from user\'s wish_list' do
         subject.push(variant)
-        expect(subject.delete(variant)[:result]).to be_true
+        expect(subject.delete(variant)[:result]).to be true
       end
 
       it 'does not delete wish from user\'s wish_list' do
-        expect(subject.delete(variant)[:result]).to be_false
+        expect(subject.delete(variant)[:result]).to be false
       end
     end
   end

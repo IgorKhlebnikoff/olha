@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SearchesController do
+RSpec.describe SearchesController, :type => :controller do
   let(:variant) { FactoryGirl.create(:variant) }
 
   describe '#index' do

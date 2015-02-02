@@ -1,20 +1,27 @@
 development:
   adapter: postgresql
+  encoding: utf8
   database: olha_dev
   host: localhost
+  pool: 5
   username: postgres
-  password: password
+  password: postgres
 
 test:
   adapter: postgresql
+  encoding: utf8
   database: olha_test
   host: localhost
+  pool: 5
   username: postgres
-  password: password
+  password: postgres
 
 production:
   adapter: postgresql
+  encoding: utf8
   database: olha_prodaction
   host: localhost
+  pool: 5
   username: postgres
-  password: password
+  password: postgres
+
