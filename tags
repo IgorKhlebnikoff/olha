@@ -1,0 +1,161 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AddRoleIdToUsers	db/migrate/20130518191506_add_role_id_to_users.rb	/^class AddRoleIdToUsers < ActiveRecord::Migration$/;"	c
+Admin	app/controllers/admin/assortments_controller.rb	/^class Admin::AssortmentsController < ApplicationController$/;"	c
+Admin	app/controllers/admin/categories_controller.rb	/^class Admin::CategoriesController < ApplicationController$/;"	c
+Admin	app/controllers/admin/colors_controller.rb	/^class Admin::ColorsController < ApplicationController$/;"	c
+Admin	app/controllers/admin/currencies_controller.rb	/^class Admin::CurrenciesController < ApplicationController$/;"	c
+Admin	app/controllers/admin/dashboard_controller.rb	/^class Admin::DashboardController < ApplicationController$/;"	c
+Admin	app/controllers/admin/products_controller.rb	/^class Admin::ProductsController < ApplicationController$/;"	c
+Admin	app/controllers/admin/sizes_controller.rb	/^class Admin::SizesController < ApplicationController$/;"	c
+Admin	app/controllers/admin/variants_controller.rb	/^class Admin::VariantsController < ApplicationController$/;"	c
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Olha
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+Assortment	app/models/assortment.rb	/^class Assortment < ActiveRecord::Base$/;"	c
+Authentication	app/models/authentication.rb	/^class Authentication < ActiveRecord::Base$/;"	c
+AuthenticationsController	app/controllers/authentications_controller.rb	/^class AuthenticationsController < ApplicationController$/;"	c
+Bag	app/models/bag.rb	/^class Bag < ActiveRecord::Base$/;"	c
+BagsController	app/controllers/bags_controller.rb	/^class BagsController < ApplicationController$/;"	c
+BagsHelper	app/helpers/bags_helper.rb	/^module BagsHelper$/;"	m
+Category	app/models/category.rb	/^class Category < ActiveRecord::Base$/;"	c
+Color	app/models/color.rb	/^class Color < ActiveRecord::Base$/;"	c
+Configuration	lib/paypal.rb	/^  class Configuration$/;"	c	class:Paypal
+Constants	lib/constants.rb	/^module Constants$/;"	m
+CreateAssortments	db/migrate/20130622080240_create_assortments.rb	/^class CreateAssortments < ActiveRecord::Migration$/;"	c
+CreateAuthentications	db/migrate/20130629182636_create_authentications.rb	/^class CreateAuthentications < ActiveRecord::Migration$/;"	c
+CreateBags	db/migrate/20130621191201_create_bags.rb	/^class CreateBags < ActiveRecord::Migration$/;"	c
+CreateCategories	db/migrate/20130621190512_create_categories.rb	/^class CreateCategories < ActiveRecord::Migration$/;"	c
+CreateColors	db/migrate/20130621183050_create_colors.rb	/^class CreateColors < ActiveRecord::Migration$/;"	c
+CreateCurrencies	db/migrate/20130626183100_create_currencies.rb	/^class CreateCurrencies < ActiveRecord::Migration$/;"	c
+CreateOrders	db/migrate/20130621191249_create_orders.rb	/^class CreateOrders < ActiveRecord::Migration$/;"	c
+CreatePrices	db/migrate/20130626182802_create_prices.rb	/^class CreatePrices < ActiveRecord::Migration$/;"	c
+CreateProducts	db/migrate/20130621183339_create_products.rb	/^class CreateProducts < ActiveRecord::Migration$/;"	c
+CreateProfiles	db/migrate/20130621190132_create_profiles.rb	/^class CreateProfiles < ActiveRecord::Migration$/;"	c
+CreateReviews	db/migrate/20130622094747_create_reviews.rb	/^class CreateReviews < ActiveRecord::Migration$/;"	c
+CreateRoles	db/migrate/20130518191131_create_roles.rb	/^class CreateRoles < ActiveRecord::Migration$/;"	c
+CreateSizes	db/migrate/20130622071354_create_sizes.rb	/^class CreateSizes < ActiveRecord::Migration$/;"	c
+CreateVariants	db/migrate/20130626182353_create_variants.rb	/^class CreateVariants < ActiveRecord::Migration$/;"	c
+CreateWishLists	db/migrate/20130621191130_create_wish_lists.rb	/^class CreateWishLists < ActiveRecord::Migration$/;"	c
+Currency	app/models/currency.rb	/^class Currency < ActiveRecord::Base$/;"	c
+DeviseCreateUsers	db/migrate/20130518175509_devise_create_users.rb	/^class DeviseCreateUsers < ActiveRecord::Migration$/;"	c
+HomeController	app/controllers/home_controller.rb	/^class HomeController < ApplicationController$/;"	c
+HomeHelper	app/helpers/home_helper.rb	/^module HomeHelper$/;"	m
+I18n_exist	lib/i18n_exist.rb	/^module I18n_exist$/;"	m
+Olha	config/application.rb	/^module Olha$/;"	m
+Order	app/models/order.rb	/^class Order < ActiveRecord::Base$/;"	c
+OrdersController	app/controllers/orders_controller.rb	/^class OrdersController < ApplicationController$/;"	c
+Paypal	lib/paypal.rb	/^module Paypal$/;"	m
+Popup	app/assets/javascripts/application.js	/^}$/;"	f
+Popup.hideModal	app/assets/javascripts/application.js	/^Popup = function() {}$/;"	f
+Price	app/models/price.rb	/^class Price < ActiveRecord::Base$/;"	c
+Product	app/models/product.rb	/^class Product < ActiveRecord::Base$/;"	c
+ProductsController	app/controllers/products_controller.rb	/^class ProductsController < ApplicationController$/;"	c
+ProductsHelper	app/helpers/products_helper.rb	/^module ProductsHelper$/;"	m
+Profile	app/models/profile.rb	/^class Profile < ActiveRecord::Base$/;"	c
+RegistrationsController	app/controllers/registrations_controller.rb	/^class RegistrationsController < Devise::RegistrationsController$/;"	c
+Review	app/models/review.rb	/^class Review < ActiveRecord::Base$/;"	c
+ReviewsController	app/controllers/reviews_controller.rb	/^class ReviewsController < ApplicationController$/;"	c
+Role	app/models/role.rb	/^class Role < ActiveRecord::Base$/;"	c
+Search	lib/search.rb	/^class Search$/;"	c
+SearchesController	app/controllers/searches_controller.rb	/^class SearchesController < ApplicationController$/;"	c
+SearchesHelper	app/helpers/searches_helper.rb	/^module SearchesHelper$/;"	m
+Size	app/models/size.rb	/^class Size < ActiveRecord::Base$/;"	c
+StandartBuilder	lib/standart_builder.rb	/^class StandartBuilder < ActionView::Helpers::FormBuilder$/;"	c
+User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
+Variant	app/models/variant.rb	/^class Variant < ActiveRecord::Base$/;"	c
+WishList	app/models/wish_list.rb	/^class WishList < ActiveRecord::Base$/;"	c
+WishesController	app/controllers/wishes_controller.rb	/^class WishesController < ApplicationController$/;"	c
+addWall	app/assets/javascripts/application.js	/^}$/;"	f
+admin_side	app/helpers/application_helper.rb	/^  def admin_side$/;"	f	class:ApplicationHelper
+all_assortments	app/controllers/admin/products_controller.rb	/^   def all_assortments$/;"	f	class:Admin
+apply_omniauth	app/models/user.rb	/^  def apply_omniauth(omniauth)$/;"	f	class:User
+assortments	app/controllers/admin/assortments_controller.rb	/^  def assortments$/;"	f	class:Admin
+autocomplete	app/controllers/searches_controller.rb	/^  def autocomplete$/;"	f	class:SearchesController
+build_resource	app/controllers/registrations_controller.rb	/^  def build_resource(*args)$/;"	f	class:RegistrationsController
+categories	app/controllers/admin/assortments_controller.rb	/^  def categories$/;"	f	class:Admin
+change	db/migrate/20130518175509_devise_create_users.rb	/^  def change$/;"	f	class:DeviseCreateUsers
+change	db/migrate/20130518191131_create_roles.rb	/^  def change$/;"	f	class:CreateRoles
+change	db/migrate/20130518191506_add_role_id_to_users.rb	/^  def change$/;"	f	class:AddRoleIdToUsers
+change	db/migrate/20130621183050_create_colors.rb	/^  def change$/;"	f	class:CreateColors
+change	db/migrate/20130621183339_create_products.rb	/^  def change$/;"	f	class:CreateProducts
+change	db/migrate/20130621190132_create_profiles.rb	/^  def change$/;"	f	class:CreateProfiles
+change	db/migrate/20130621190512_create_categories.rb	/^  def change$/;"	f	class:CreateCategories
+change	db/migrate/20130621191130_create_wish_lists.rb	/^  def change$/;"	f	class:CreateWishLists
+change	db/migrate/20130621191201_create_bags.rb	/^  def change$/;"	f	class:CreateBags
+change	db/migrate/20130621191249_create_orders.rb	/^  def change$/;"	f	class:CreateOrders
+change	db/migrate/20130622071354_create_sizes.rb	/^  def change$/;"	f	class:CreateSizes
+change	db/migrate/20130622080240_create_assortments.rb	/^  def change$/;"	f	class:CreateAssortments
+change	db/migrate/20130622094747_create_reviews.rb	/^  def change$/;"	f	class:CreateReviews
+change	db/migrate/20130626182353_create_variants.rb	/^  def change$/;"	f	class:CreateVariants
+change	db/migrate/20130626182802_create_prices.rb	/^  def change$/;"	f	class:CreatePrices
+change	db/migrate/20130626183100_create_currencies.rb	/^  def change$/;"	f	class:CreateCurrencies
+change	db/migrate/20130629182636_create_authentications.rb	/^  def change$/;"	f	class:CreateAuthentications
+create	app/controllers/admin/assortments_controller.rb	/^  def create$/;"	f	class:Admin
+create	app/controllers/admin/categories_controller.rb	/^  def create$/;"	f	class:Admin
+create	app/controllers/admin/colors_controller.rb	/^  def create$/;"	f	class:Admin
+create	app/controllers/admin/currencies_controller.rb	/^  def create$/;"	f	class:Admin
+create	app/controllers/admin/products_controller.rb	/^  def create$/;"	f	class:Admin
+create	app/controllers/admin/sizes_controller.rb	/^  def create$/;"	f	class:Admin
+create	app/controllers/admin/variants_controller.rb	/^  def create$/;"	f	class:Admin
+create	app/controllers/authentications_controller.rb	/^  def create$/;"	f	class:AuthenticationsController
+create	app/controllers/registrations_controller.rb	/^  def create$/;"	f	class:RegistrationsController
+create	app/controllers/reviews_controller.rb	/^  def create$/;"	f	class:ReviewsController
+current_page	app/controllers/application_controller.rb	/^  def current_page$/;"	f	class:ApplicationController
+destroy	app/controllers/admin/assortments_controller.rb	/^  def destroy$/;"	f	class:Admin
+destroy	app/controllers/admin/categories_controller.rb	/^  def destroy$/;"	f	class:Admin
+destroy	app/controllers/admin/colors_controller.rb	/^  def destroy$/;"	f	class:Admin
+destroy	app/controllers/admin/currencies_controller.rb	/^  def destroy$/;"	f	class:Admin
+destroy	app/controllers/admin/products_controller.rb	/^  def destroy$/;"	f	class:Admin
+destroy	app/controllers/admin/sizes_controller.rb	/^  def destroy$/;"	f	class:Admin
+destroy	app/controllers/admin/variants_controller.rb	/^  def destroy$/;"	f	class:Admin
+destroy	app/controllers/reviews_controller.rb	/^  def destroy$/;"	f	class:ReviewsController
+error_messages	lib/standart_builder.rb	/^  def error_messages(opts = { attribute_name: true })$/;"	f	class:StandartBuilder
+exist?	lib/i18n_exist.rb	/^      def exist?(key)$/;"	f	class:I18n_exist
+find_assortsment	app/controllers/admin/assortments_controller.rb	/^  def find_assortsment$/;"	f	class:Admin
+find_category	app/controllers/admin/categories_controller.rb	/^  def find_category$/;"	f	class:Admin
+find_product	app/controllers/admin/products_controller.rb	/^  def find_product$/;"	f	class:Admin
+find_product	app/controllers/admin/variants_controller.rb	/^  def find_product$/;"	f	class:Admin
+find_product	app/controllers/products_controller.rb	/^  def find_product$/;"	f	class:ProductsController
+find_product	app/controllers/reviews_controller.rb	/^  def find_product$/;"	f	class:ReviewsController
+find_variant	app/controllers/admin/variants_controller.rb	/^  def find_variant$/;"	f	class:Admin
+flash_class	app/helpers/application_helper.rb	/^  def flash_class(type)$/;"	f	class:ApplicationHelper
+full_name	app/models/profile.rb	/^  def full_name$/;"	f	class:Profile
+gen_secure_token	lib/paypal.rb	/^    def self.gen_secure_token(amount, order)$/;"	F	class:Paypal.Configuration
+index	app/controllers/admin/assortments_controller.rb	/^  def index$/;"	f	class:Admin
+index	app/controllers/admin/categories_controller.rb	/^  def index$/;"	f	class:Admin
+index	app/controllers/admin/colors_controller.rb	/^  def index$/;"	f	class:Admin
+index	app/controllers/admin/currencies_controller.rb	/^  def index$/;"	f	class:Admin
+index	app/controllers/admin/dashboard_controller.rb	/^  def index$/;"	f	class:Admin
+index	app/controllers/admin/products_controller.rb	/^  def index$/;"	f	class:Admin
+index	app/controllers/admin/sizes_controller.rb	/^  def index$/;"	f	class:Admin
+index	app/controllers/admin/variants_controller.rb	/^  def index$/;"	f	class:Admin
+index	app/controllers/home_controller.rb	/^  def index$/;"	f	class:HomeController
+index	app/controllers/products_controller.rb	/^  def index$/;"	f	class:ProductsController
+index	app/controllers/reviews_controller.rb	/^  def index$/;"	f	class:ReviewsController
+index	app/controllers/searches_controller.rb	/^  def index$/;"	f	class:SearchesController
+initialize	lib/search.rb	/^  def initialize(search_params)$/;"	f	class:Search
+is_admin?	app/controllers/application_controller.rb	/^  def is_admin?$/;"	f	class:ApplicationController
+is_admin?	app/models/user.rb	/^  def is_admin?$/;"	f	class:User
+new	app/controllers/admin/assortments_controller.rb	/^  def new$/;"	f	class:Admin
+new	app/controllers/admin/categories_controller.rb	/^  def new$/;"	f	class:Admin
+new	app/controllers/admin/colors_controller.rb	/^  def new$/;"	f	class:Admin
+new	app/controllers/admin/currencies_controller.rb	/^  def new$/;"	f	class:Admin
+new	app/controllers/admin/products_controller.rb	/^  def new$/;"	f	class:Admin
+new	app/controllers/admin/sizes_controller.rb	/^  def new$/;"	f	class:Admin
+new	app/controllers/admin/variants_controller.rb	/^  def new$/;"	f	class:Admin
+new	app/controllers/reviews_controller.rb	/^  def new$/;"	f	class:ReviewsController
+password_required?	app/models/user.rb	/^  def password_required?$/;"	f	class:User
+paypal_url	app/models/product.rb	/^  def paypal_url(return_url) $/;"	f	class:Product
+perform	lib/search.rb	/^  def perform$/;"	f	class:Search
+provider_name	app/models/authentication.rb	/^  def provider_name$/;"	f	class:Authentication
+sendRequest	app/assets/javascripts/application.js	/^\/\/ This is a manifest file that'll be compiled into application.js, which will include all the files$/;"	f
+show	app/controllers/products_controller.rb	/^  def show$/;"	f	class:ProductsController
+update	app/controllers/admin/assortments_controller.rb	/^  def update$/;"	f	class:Admin
+update	app/controllers/admin/categories_controller.rb	/^  def update$/;"	f	class:Admin
+update	app/controllers/admin/products_controller.rb	/^  def update$/;"	f	class:Admin
+update	app/controllers/admin/variants_controller.rb	/^  def update$/;"	f	class:Admin
