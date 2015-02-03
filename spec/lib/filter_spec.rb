@@ -1,6 +1,7 @@
+require 'rails_helper'
 require 'spec_helper'
 
-describe Filter do
+RSpec.describe Filter do
   let!(:user) { FactoryGirl.create(:user_with_profile) }
   let!(:another_user) { FactoryGirl.create(:user_with_profile) }
 

@@ -15,7 +15,7 @@ describe User do
 
   describe 'delegates' do
     let(:user_with_profile) { FactoryGirl.create(:user_with_profile) }
-    
+
     it 'has method first_name' do
       expect(user_with_profile.first_name).to be_present
     end
@@ -58,11 +58,11 @@ describe User do
       let(:admin) { FactoryGirl.create(:admin, role: role) }
 
       it 'returns true' do
-        expect(admin.is_admin?).to be_true
+        expect(admin.is_admin?).to be true
       end
 
       it 'returns false' do
-        expect(user.is_admin?).to be_false
+        expect(user.is_admin?).to be false
       end
     end
   end

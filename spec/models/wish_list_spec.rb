@@ -1,6 +1,7 @@
+require 'rails_helper'
 require 'spec_helper'
 
-describe WishList do
+RSpec.describe WishList, :type => :model do
   let!(:user) { FactoryGirl.create(:user_with_profile) }
 
   describe 'associations' do
@@ -22,7 +23,7 @@ describe WishList do
     context 'invalid params' do
       it 'invalid object' do
         subject.push(variant)
-        expect(subject.push(variant)[:result]).to be_false
+        expect(subject.push(variant)[:result]).to be false
       end
     end
   end

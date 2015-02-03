@@ -2,6 +2,7 @@ en:
   layouts:
     header:
       title: 'Olha'
+      menu: 'Menu'
       home: 'Home'
       sign_up: 'Sign Up'
       login: 'Login'

@@ -1,0 +1,14 @@
+[2015-01-30 13:58:18,965][INFO ][node                     ] [Guido Carosella] {0.20.6}[10204]: initializing ...
+[2015-01-30 13:58:18,973][INFO ][plugins                  ] [Guido Carosella] loaded [], sites []
+[2015-01-30 13:58:21,123][INFO ][node                     ] [Guido Carosella] {0.20.6}[10204]: initialized
+[2015-01-30 13:58:21,123][INFO ][node                     ] [Guido Carosella] {0.20.6}[10204]: starting ...
+[2015-01-30 13:58:21,202][INFO ][transport                ] [Guido Carosella] bound_address {inet[/0:0:0:0:0:0:0:0:9301]}, publish_address {inet[/10.0.0.116:9301]}
+[2015-01-30 13:58:24,251][INFO ][cluster.service          ] [Guido Carosella] new_master [Guido Carosella][b-Q2mSG5QGOwgZwfij8wVg][inet[/10.0.0.116:9301]], reason: zen-disco-join (elected_as_master)
+[2015-01-30 13:58:24,291][INFO ][discovery                ] [Guido Carosella] elasticsearch/b-Q2mSG5QGOwgZwfij8wVg
+[2015-01-30 13:58:24,323][INFO ][http                     ] [Guido Carosella] bound_address {inet[/0:0:0:0:0:0:0:0:9201]}, publish_address {inet[/10.0.0.116:9201]}
+[2015-01-30 13:58:24,327][INFO ][node                     ] [Guido Carosella] {0.20.6}[10204]: started
+[2015-01-30 13:58:24,374][INFO ][gateway                  ] [Guido Carosella] recovered [0] indices into cluster_state
+[2015-01-30 14:02:18,928][INFO ][node                     ] [Guido Carosella] {0.20.6}[10204]: stopping ...
+[2015-01-30 14:02:18,958][INFO ][node                     ] [Guido Carosella] {0.20.6}[10204]: stopped
+[2015-01-30 14:02:18,959][INFO ][node                     ] [Guido Carosella] {0.20.6}[10204]: closing ...
+[2015-01-30 14:02:18,977][INFO ][node                     ] [Guido Carosella] {0.20.6}[10204]: closed

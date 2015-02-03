@@ -1,4 +1,4 @@
-doctype
+doctype html
 html
   head
     title Olha
@@ -8,10 +8,10 @@ html
     = ajaxful_rating_style
   body class="#{yield(:body_class)}"
     header
-      .container-fluid
+      .container
         = render partial: 'layouts/header'
     #wrap
-      .container-fluid.content-container
+      .container.content-container
         = render partial: 'shared/flash_messages'
         = yield
         = render partial: 'shared/modal_window'

@@ -1,6 +1,8 @@
+require 'rails_helper'
 require 'spec_helper'
 
-describe ProfilesController do
+
+RSpec.describe ProfilesController, :type => :controller do
   let(:user) { FactoryGirl.create(:user_with_profile) }
   let(:profile) { user.profile }
 
@@ -8,6 +10,7 @@ describe ProfilesController do
     controller.stub(:current_user).and_return(user)
     controller.stub(:authenticate_user!).and_return(true)
   end
+
 
   context '#show' do
     before { get :show, id: profile }
@@ -41,7 +44,7 @@ describe ProfilesController do
   describe '#update' do
 
     context 'response' do
-      let(:true_attributes) { FactoryGirl.attributes_for(:profile) } 
+      let(:true_attributes) { FactoryGirl.attributes_for(:profile) }
 
       before { put :update, id: profile, profile: true_attributes }
 

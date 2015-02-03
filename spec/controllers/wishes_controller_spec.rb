@@ -1,6 +1,8 @@
+require 'rails_helper'
 require 'spec_helper'
 
-describe WishesController do
+
+RSpec.describe WishesController, :type => :controller do
   let(:user) { FactoryGirl.create(:user_with_profile) }
   let(:variant) { FactoryGirl.create(:variant) }
 
