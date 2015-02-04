@@ -8,10 +8,10 @@ html
     = ajaxful_rating_style
   body class="#{yield(:body_class)}"
     header
-      .container
+      .container-fluid
         = render partial: 'layouts/header'
     #wrap
-      .container.content-container
+      .container-fluid.content-container
         = render partial: 'shared/flash_messages'
         = yield
         = render partial: 'shared/modal_window'
