@@ -1,14 +1,14 @@
-.row-fluid#product
+.row#product
   = form_for @review, url: product_reviews_path(@product), remote: true, builder: StandartBuilder do |f|
-    .row-fluid
+    .row
       = f.error_messages
-    .row-fluid
-      .span12= f.label t('.review')
-    .row-fluid
-      .span12= f.text_area :body, rows: 4, class: 'span11'
-    .row-fluid
-      .span12= ratings_for @product
-    .row-fluid
-      .span4.offset4= f.submit t('.submit'), class: 'btn btn-success'
+    .row
+      .col-md-12= f.label t('.review')
+    .row
+      .col-md-12= f.text_area :body, rows: 4, class: 'span11'
+    .row
+      .col-md-12= ratings_for @product
+    .row
+      .col-md-4.col-md-offset-4= f.submit t('.submit'), class: 'btn btn-success'
       .pull-right
-        .span4= link_to t('cancel'), 'javascript: void(false)', onclick: 'Popup.hideModal()', class: 'btn'
+        .col-md-4= link_to t('cancel'), 'javascript: void(false)', onclick: 'Popup.hideModal()', class: 'btn'

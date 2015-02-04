@@ -1,25 +1,22 @@
-.navbar
+.navbar.navbar-default
   .row
     .col-md-12
       .col-md-6.text-left
-        = link_to root_path, class: "brand" do
+        = link_to root_path, class: "navbar-brand" do
           span.logo_title
             strong Olha
-        a.btn.btn-navbar data-toggle="collapse" data-target=".nav-collapse"
-          span.nb_left.pull-left
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          span.nb_right.pull-right= t(".menu")
+        span.nb_left.pull-left
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
       - if user_signed_in?
         .col-md-6.text-right
           = link_to t('.wish_list', items_count: current_user.orders.count), '#'
           = link_to t('.cart', items_count: current_user.orders.count), '#'
           = link_to t('.sign_out'), destroy_user_session_path, method: :delete
       - else
-        .nav-collapse.collapse
-          ul.nav.pull-right
-            li.active
+          ul.nav.navbar-nav.pull-right
+            li
               = link_to t(".home"), root_path
             li
               = link_to t(".sign_up"), new_user_registration_path

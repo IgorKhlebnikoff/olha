@@ -1,6 +1,6 @@
 / = render 'errors'
 .block
-  .row-fluid
+  .row
     = form_for @profile, url: profile_path, builder: StandartBuilder do |f|
       = f.error_messages
       = f.label t('.first_name')

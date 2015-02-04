@@ -1,15 +1,15 @@
 #full_search_form
-  .row-fluid
-    .span3.block= render partial: 'found_in_categories'
-    .span9
-      .row-fluid.block
+  .row
+    .col-md-3.block= render partial: 'found_in_categories'
+    .col-md-9
+      .row.block
         = render partial: 'full_search_form'
 
-      .row-fluid
-        .span12
+      .row
+        .col-md-12
           h3= t('.search_results')
-      .row-fluid
-        .span12#search_results
+      .row
+        .col-md-12#search_results
           - if @results.try(:any?)
             = render partial: 'result', collection: @results
           - else

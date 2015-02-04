@@ -1,29 +1,29 @@
 .block
-  .row-fluid
-    .span3
+  .row
+    .col-md-3
       | "#{ t('.first_name') }"
-    .span3
+    .col-md-3
       = @profile.first_name
-  .row-fluid
-    .span3
+  .row
+    .col-md-3
       | "#{ t('.last_name') }"
-    .span3
+    .col-md-3
       = @profile.last_name
-  .row-fluid
-    .span3
+  .row
+    .col-md-3
       | "#{ t('.phone_number') }"
-    .span3
+    .col-md-3
       = "(+#{@code}) #{@profile.phone_number}"
-  .row-fluid
-    .span3
+  .row
+    .col-md-3
       | "#{ t('.gender') }"
-    .span3
+    .col-md-3
       = @profile.gender
-  .row-fluid
-    .span3
+  .row
+    .col-md-3
       | "#{ t('.country') }"
-    .span3
+    .col-md-3
       = "#{@country}"
-  .row-fluid
+  .row
     =link_to t('edit'), edit_profile_path(@profile), class: 'btn btn-success'
         

@@ -1,10 +1,10 @@
-.row-fluid
+.row
   = form_for @assortment, url: url, method: method, remote: true, builder: StandartBuilder do |f|
     div= f.error_messages
-    .row-fluid
-      .span2= f.label t('.name')
-      .span5= f.text_field :name
-      .span5= select_tag :category_id, options_from_collection_for_select(@categories, 'id', 'name')
-    .row-fluid
-      .span6= f.submit t('save')
-      .span6= link_to t('cancel'), 'javascript: void(false)', onclick: 'Popup.hideModal()'
+    .row
+      .col-md-2= f.label t('.name')
+      .col-md-5= f.text_field :name
+      .col-md-5= select_tag :category_id, options_from_collection_for_select(@categories, 'id', 'name')
+    .row
+      .col-md-6= f.submit t('save')
+      .col-md-6= link_to t('cancel'), 'javascript: void(false)', onclick: 'Popup.hideModal()'

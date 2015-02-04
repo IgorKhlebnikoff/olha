@@ -1,13 +1,13 @@
-.block.row-fluid id="wish_#{wish.id}"
-  .span3.block.picture.text-center Picture will be here
-  .span3
-    .row-fluid
-      .span12= wish.name
-    .row-fluid
-      .span12= truncate(wish.description, length: 40)
-  .span3
-    .row-fluid
-      .span12= link_to t('.add_to_order'), 'javascript(void: false)', remote: true
-  .span3
-    .row-fluid
-      .span12= link_to t('.delete'), wish_remove_path(wish_id: wish), remote: true
+.block.row id="wish_#{wish.id}"
+  .col-md-3.block.picture.text-center Picture will be here
+  .col-md-3
+    .row
+      .col-md-12= wish.name
+    .row
+      .col-md-12= truncate(wish.description, length: 40)
+  .col-md-3
+    .row
+      .col-md-12= link_to t('.add_to_order'), 'javascript(void: false)', remote: true
+  .col-md-3
+    .row
+      .col-md-12= link_to t('.delete'), wish_remove_path(wish_id: wish), remote: true
