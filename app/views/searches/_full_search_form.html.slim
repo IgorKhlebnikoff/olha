@@ -1,8 +1,8 @@
-.row-fluid
+.row
   = form_for :search, url: searches_path do |f|
-    .row-fluid
-      .span9= f.text_field :term
-      .span3= f.submit t('search'), class: 'btn btn-primary'
-    .row-fluid
-      .span6= f.select :sort_by, []
-      .span6= f.select :filter_by, []
+    .row
+      .col-md-9= f.text_field :term
+      .col-md-3= f.submit t('search'), class: 'btn btn-primary'
+    .row
+      .col-md-6= f.select :sort_by, []
+      .col-md-6= f.select :filter_by, []

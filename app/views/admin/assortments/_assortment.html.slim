@@ -1,4 +1,4 @@
-.row-fluid id="assortment_#{assortment.id}"
-  .span4= assortment.name
-  .span4= link_to t('edit'), edit_admin_assortment_path(assortment), remote: true
-  .span4= link_to t('delete'), admin_assortment_path(assortment), remote: true, method: 'delete'
+.row id="assortment_#{assortment.id}"
+  .col-md-4= assortment.name
+  .col-md-4= link_to t('edit'), edit_admin_assortment_path(assortment), remote: true
+  .col-md-4= link_to t('delete'), admin_assortment_path(assortment), remote: true, method: 'delete'

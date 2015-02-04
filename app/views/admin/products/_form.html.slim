@@ -1,15 +1,15 @@
-.row-fluid
+.row
   = form_for @product, url: url, method: method, remote: true, builder: StandartBuilder do |f|
     div= f.error_messages(attribute_name: false)
-    .row-fluid
-      .span3= f.label t('.name')
-      .span6= f.text_field :name
-    .row-fluid
-      .span3= f.label t('.description')
-      .span6= f.text_field :description
-    .row-fluid
-      .span3= f.label t('.assortment')
-      .span6= f.collection_select :assortment_id, @assortments, :id, :name, prompt: true
-    .row-fluid
-      .span6= f.submit t('save')
-      .span6= link_to t('cancel'), 'javascript: void(false)', onclick: 'Popup.hideModal()'
+    .row
+      .col-md-3= f.label t('.name')
+      .col-md-6= f.text_field :name
+    .row
+      .col-md-3= f.label t('.description')
+      .col-md-6= f.text_field :description
+    .row
+      .col-md-3= f.label t('.assortment')
+      .col-md-6= f.collection_select :assortment_id, @assortments, :id, :name, prompt: true
+    .row
+      .col-md-6= f.submit t('save')
+      .col-md-6= link_to t('cancel'), 'javascript: void(false)', onclick: 'Popup.hideModal()'
