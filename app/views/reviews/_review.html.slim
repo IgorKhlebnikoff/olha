@@ -1,5 +1,5 @@
-.row-fluid id="review_#{review.id}"
-  .row-fluid
-    .span6= review.full_name
-    .span6.text-right= review.created_at.advanced
-  .span12= review.body
+.row id="review_#{review.id}"
+  .row
+    .col-md-6= review.full_name
+    .col-md-6.text-right= review.created_at.advanced
+  .col-md-12= review.body

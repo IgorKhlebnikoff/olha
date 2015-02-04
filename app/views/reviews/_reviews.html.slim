@@ -1,4 +1,4 @@
-.row-fluid
+.row
   ul.nav.nav-tabs#tabs
     li.active
       = link_to t('.review'), '#review'
@@ -7,6 +7,6 @@
   .tab-content
     .tab-pane.active#review
       = link_to t('.new_review'), new_product_review_path(@product), remote: true, class: 'btn'
-      .row-fluid.span11#comments data-url="#{product_reviews_path(@product)}"
+      .row.col-md-11#comments data-url="#{product_reviews_path(@product)}"
     .tab-pane#ask
       = t('.ask')

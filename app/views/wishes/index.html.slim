@@ -1,6 +1,6 @@
-.row-fluid
+.row
   h4= t('.title')
-#wishes.row-fluid
+#wishes.row
   - if @wishes.any?
     = render partial: 'wish', collection: @wishes
   - else
