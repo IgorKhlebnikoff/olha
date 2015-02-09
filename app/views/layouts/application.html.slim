@@ -12,9 +12,9 @@ html.preview
       .container-fluid
         = render partial: 'layouts/header'
     #wrap
-      .container-fluid.content-container
+      .container-fluid
         = render partial: 'shared/flash_messages'
         = yield
         = render partial: 'shared/modal_window'
-        div#modal_window.modal.hide.fade
+
     = render partial: 'layouts/footer'

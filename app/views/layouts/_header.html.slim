@@ -24,59 +24,6 @@
             = link_to t(".sign_up"), new_user_registration_path
           li
             = link_to t(".login"), new_user_session_path
-#hero-slides.carousel.slide data-ride="carousel"
-  ol.carousel-indicators
-    li data-slide-to="0" data-target="#hero-slides"
-    li.active data-slide-to="1" data-target="#hero-slides"
-    li data-slide-to="2" data-target="#hero-slides"
-  .carousel-inner
-    .item
-      = image_tag "01.jpg"
-    .item.active
-      = image_tag "06.jpg"
-    .item
-      = image_tag "10.jpg"
-#hero.light-typo
-  .container.welcome-content
-    .row
-      .col-lg-4.col-lg-offset-4.col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2.col-xs-12.text-center.wow.fadeInUp.animated style=("visibility: visible; animation-name: fadeInUp;")
-        img#logo.img-responsive.text-center alt=("shop logo") src="img/logo-green.png" width="300"
-        h2 If you have 1-3  or more products for sale microStore is perfect template for you! MicroStore is a simple modern One page 100% responsive template.
-        ul.social-links.text-center
-          li
-            i.fa.fa-twitter
-          li
-            i.fa.fa-facebook
-          li
-            i.fa.fa-vimeo-square
-        a.btn.btn-store.smooth-scroll href="#products" Browse The Goods
-  .overlay-bg
-#products
-  .container-fluid
-    h3 Products
-    .container
-      .product
-        = image_tag "01.jpg"
-        .product-action
-          i.fa.fa-eye
-        .product-description
-          .product-name Bed
-          .product-price $700
-
-      .product
-        = image_tag "06.jpg"
-        .product-action
-          i.fa.fa-eye
-        .product-description
-          .product-name Nightstand
-          .product-price $400
-      .product
-        = image_tag "10.jpg"
-        .product-action
-          i.fa.fa-eye
-        .product-description
-          .product-name Hammock
-          .product-price $600
 
 
 

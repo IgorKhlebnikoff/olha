@@ -1,5 +1,4 @@
-.preview{
-  padding-top: 50px;
+.preview {
   height: 100%;
   min-height: 100%;
   overflow: hidden;
@@ -14,9 +13,9 @@ body {
   background-color: #FFF;
   margin: 0px;
   box-sizing: border-box;
-  color: #FFF;
+  color: grey;
 }
-.container-fluid{
+.container-fluid {
   padding: 0;
 }
 
@@ -33,7 +32,7 @@ body {
   animation-fill-mode: both;
   h2 {
     font-size: 18px;
-    color: inherit;
+    color: #ffffff;
     font-weight: 200;
   }
   .social-links {
@@ -55,12 +54,12 @@ body {
       width: 50px;
       height: 50px;
       padding: 5px 0px;
+      color: #ffffff;
     }
     li:hover {
       background-color: #008000;
       border-color: #008000;
     }
-
   }
   .smooth-scroll {
     background-color: #008000;
@@ -73,13 +72,13 @@ body {
   }
 }
 
-#hero-slides{
+#hero-slides {
   position: relative;
   overflow: hidden;
   width: 100%;
   height: 600px;
-  .carousel-indicators{
-    li{
+  .carousel-indicators {
+    li {
       margin: 0 5px;
       height: 15px;
       width: 15px;
@@ -94,7 +93,7 @@ body {
   }
 }
 
-#products{
+#products {
   h3 {
     color: #54535a;
     text-align: center;
@@ -105,14 +104,14 @@ body {
     margin: 20px 20px 10px 20px;
     padding: 0 45px;
   }
-  .product{
+  .product {
     float: left;
     border: 1px solid #9c9ba2;
     height: 230px;
     width: 350px;
     margin: 20px 20px;
     border-radius: 10px;
-    .product-action{
+    .product-action {
       visibility:hidden;
       height: 0;
       i {
@@ -135,7 +134,7 @@ body {
         color: #008000;
         padding-left: 10px;
       }
-      .product-price{
+      .product-price {
         float: left;
         width: 20%;
         height: 40px;
@@ -145,10 +144,10 @@ body {
       }
     }
   }
-  .product:hover{
+  .product:hover {
     opacity: 0.5;
     cursor: pointer;
-    .product-action{
+    .product-action {
       visibility:visible;
     }
   }
@@ -158,5 +157,13 @@ body {
     border: 1px solid #9c9ba2;
     border-radius: 10px;
   }
-
+}
+input[type="submit"] {
+  width: 100px;
+}
+.cancel {
+  width: 100px;
+  a {
+    color: #808080;
+  }
 }

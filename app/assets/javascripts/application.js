@@ -21,16 +21,17 @@
 sendRequest = function(url, type) {
   $.ajax({
     type: type,
-    url: url,
+    url: url
   });
-}
+};
 
-Popup = function() {}
+Popup = function() {};
 
 Popup.hideModal = function() {
+  addWall = function(node) {
+      $(node).append('<div class="back-wall"><div>');
+  };
   $('#modal_window').modal('hide');
-}
+};
 
-addWall = function(node) {
-  $(node).append('<div class="back-wall"><div>');
-}
+

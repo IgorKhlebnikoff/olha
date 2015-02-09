@@ -1,12 +1,16 @@
-.row
-  .col-md-12
-    h4= title
-.row
-  = form_for @category, url: url, method: method, remote: true, builder: StandartBuilder do |f|
-    div= f.error_messages
+.modal-header
+  h3 Add Category
+.modal-body
+  .row
+    .col-md-12
+      h4= title
     .row
-      .col-md-3= f.label t('.name')
-      .col-md-7= f.text_field :name
-    .row
-      .col-md-6= f.submit t('save')
-      .col-md-6= link_to t('cancel'), 'javascript: void(false)', onclick: 'Popup.hideModal()'
+      = form_for @category, url: url, method: method, remote: true, builder: StandartBuilder do |f|
+        div= f.error_messages
+        .row
+          .col-md-3= f.label t('.name')
+          .col-md-6= f.text_field :name
+        .modal-footer
+          .col-md-6= f.submit t('save')
+          .col-md-2
+            button.cancel= link_to t('cancel'), 'javascript: void(false)', onclick: 'Popup.hideModal()'
