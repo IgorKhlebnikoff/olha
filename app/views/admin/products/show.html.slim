@@ -1,5 +1,13 @@
-.block
-  .row id="product_#{@product.id}"
-    .col-md-3= @product.name
-    .col-md-6= @product.description
-p= link_to t('.back'), admin_root_path
+/*.block
+    .row id="product_#{@product.id}"
+      .col-md-3= @product.name
+      .col-md-6= @product.description
+  p= link_to t('.back'), admin_root_path */
+.row
+  br
+  .col-md-1
+  .col-md-5.show-menu
+    = render partial: 'show_left_panell'
+  .col-md-6
+    .productsrow
+      = render partial: 'show_right_panell'

@@ -11,6 +11,7 @@
  *= require ajaxful_rating
  *= require bootstrap_and_overrides
  *= require styles
+ *= require star-rating
  *= require_self
  *= require admin/dashboard
  *= require_tree .

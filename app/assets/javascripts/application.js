@@ -16,6 +16,7 @@
 //= require observers
 //= require data_getters
 //= require reviews
+//= require star-rating
 //= require_tree .
 
 sendRequest = function(url, type) {

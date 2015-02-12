@@ -1,0 +1,119 @@
+.img-responsive
+  .handpicked Handpicked Product
+.product-menu
+  .row
+    .col-md-10
+      h2 Denim Jacket
+    .col-md-2
+      h1 $34
+  .row
+    .product-code Product code:
+    .product-code-description ECOM1204
+  hr
+  .col-md-12
+    form.form-horizontal role="form"
+      .form-group
+        label.col-sm-2.control-label for="quantity"
+          | Quantity
+        .col-xs-9
+          .input-group.bootstrap-touchspin
+            span.input-group-btn
+              button.btn.btn-default.bootstrap-touchspin-down type="button"
+                | -
+            span.input-group-addon.bootstrap-touchspin-prefix style=("display: none;")
+            input#quantity.form-control data-bts-boostat="10" data-bts-booster="true" data-bts-button-down-class=("btn btn-default") data-bts-button-up-class=("btn btn-default") data-bts-decimal="0" data-bts-force-step-divisibility="round" data-bts-init-val="" data-bts-max="100" data-bts-max-boosted-step="false" data-bts-min="0" data-bts-mousewheel="true" data-bts-postfix="" data-bts-postfix-extra-class="" data-bts-prefix="" data-bts-prefix-extra-class="" data-bts-step="1" data-bts-step-interval="100" data-bts-step-interval-delay="500" name="quantity" style=("display: block;") type="text" value="1" /
+            span.input-group-addon.bootstrap-touchspin-postfix style=("display: none;")
+            span.input-group-btn
+              button.btn.btn-default.bootstrap-touchspin-up type="button"
+                | +
+      .form-group
+        label.col-sm-2.control-label for="size"
+          | Size
+        .col-xs-9
+          select.form-control
+            option
+              | Small
+            option
+              | Medium
+            option
+              | Large
+            option
+              | Extra Large
+      .form-group
+        label.col-sm-2.control-label for="color"
+          | Color
+        .col-xs-10.checkbox-inline
+          .icheckbox_flat-grey style=("position: relative;")
+            input style=("position: absolute; opacity: 0;") type="checkbox" /
+            ins.iCheck-helper style=("position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;")
+          label.custom.text-danger
+            | Red
+          .icheckbox_flat-grey.checked style=("position: relative;")
+            input checked="" style=("position: absolute; opacity: 0;") type="checkbox" /
+            ins.iCheck-helper style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;")
+          label.custom.text-success
+            | Green
+          .icheckbox_flat-grey style=("position: relative;")
+            input style=("position: absolute; opacity: 0;") type="checkbox" /
+            ins.iCheck-helper style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0px none; opacity: 0;")
+          label.custom.text-primary
+            | Blue
+  .col-md-12.text-center
+    button.loadToSuccess.btn.btn-primary-custom.btn-lg
+      i.fa.fa-shopping-cart
+      | Add to Cart
+  .col-md-12
+    ul.nav.nav-tabs
+      li.active
+        a data-toggle="tab" href="#details"
+          | Details
+      li
+        a data-toggle="tab" href="#reviews"
+          | Reviews
+      li
+        a data-toggle="tab" href="#shipping"
+          | Shipping
+    .tab-content
+      #details.tab-pane.active
+        h4
+          | Product Informartion
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. Aliquam in felis sit amet augue.
+      #reviews.tab-pane
+        ul.media-list
+          li.media
+            a.pull-left href="#"
+              img.media-object alt="..." src="/assets/user_1.jpg" style="width:64px;" /
+            .media-body
+              .media-heading
+                p.pull-left
+                  a href="#"
+                    strong
+                      | John Doe
+                p.pull-right.review-time
+                  i.fa.fa-clock-o
+                  | 3 mins ago.
+              .clearfix
+              p.text-left
+                | Doloreiur quia commolu ptatemp dolupta oreprerum t…
+          li.media
+            a.pull-left href="#"
+              img.media-object alt="..." src="/assets/user_2.jpg" style="width:64px;" /
+            .media-body
+              .media-heading
+                p.pull-left
+                  a href="#"
+                    strong
+                p.pull-right.review-time
+                  i.fa.fa-clock-o
+                  | 5 days ago.
+              .clearfix
+              p.text-left
+                | Doloreiur quia commolu ptatemp dolupta oreprerum t…
+      #shipping.tab-pane.active
+        p
+          | Standard 1-5 business days $7.95
+        p
+          | Two Day 2 business days $15
+        p
+          | Next Day  1 business day  $30
