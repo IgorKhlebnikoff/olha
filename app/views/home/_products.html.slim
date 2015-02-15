@@ -2,13 +2,13 @@
   .container-fluid
     h3 Products
     .container
-      - 3.times do
+      - @products.each do |product|
         .product
-          = image_tag "no_image.jpg"
+          = link_to (image_tag product.variants.first.picture.url(:medium)), admin_product_path(product)
           .product-action
             i.fa.fa-eye
           .product-description
             .product-name
-              | name
-              //= link_to @products.find_by(id), admin_product_path(product)
-            .product-price $700
+              = link_to product.name, admin_product_path(product)
+            .product-price
+              = link_to product.variants.first.price, admin_product_path(product)

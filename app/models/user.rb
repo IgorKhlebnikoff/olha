@@ -15,8 +15,6 @@ class User < ActiveRecord::Base
 
   ajaxful_rater
 
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :role_id
-
   delegate :first_name, :last_name, :phone_number, :gender, :full_name, to: :profile
 
   after_create :create_profile

@@ -11,7 +11,7 @@ class Product < ActiveRecord::Base
 
   ajaxful_rateable { conditions.where( stars: 5, dimensions: [:quality]) }
 
-  attr_accessible :name, :description, :assortment_id
+  accepts_nested_attributes_for :variants
 
   mapping do
     indexes :name, analyzer: 'snowball', boost: 100

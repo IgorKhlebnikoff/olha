@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150128110616) do
+ActiveRecord::Schema.define(version: 20150216102647) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -162,6 +162,11 @@ ActiveRecord::Schema.define(version: 20150128110616) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "price_id"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
+    t.float    "price"
   end
 
   create_table "wish_lists", force: :cascade do |t|
