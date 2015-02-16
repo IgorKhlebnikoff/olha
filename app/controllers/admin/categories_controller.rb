@@ -10,14 +10,14 @@ class Admin::CategoriesController < ApplicationController
   end
 
   def create
-    @category = Category.new(params[:category])
+    @category = Category.new(category_params)
     unless @category.save
       render action: :new
     end
   end
 
   def update
-    unless @category.update_attributes(params[:category])
+    unless @category.update_attributes(category_params)
       render action: :edit
     end
   end
@@ -30,5 +30,9 @@ class Admin::CategoriesController < ApplicationController
 
   def find_category
     @category = Category.find_by_id(params[:id])
+  end
+
+  def category_params
+    params.require(:category).permit(:name)
   end
 end

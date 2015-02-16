@@ -5,10 +5,12 @@ class Variant < ActiveRecord::Base
   belongs_to :product
   belongs_to :color
   belongs_to :size
-  belongs_to :price
+
+  has_attached_file :picture, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "no_image.jpg"
+  validates_attachment_content_type :picture, :content_type => /\Aimage\/.*\Z/
 
   validates :in_stock, presence: true
-  validates :product_id, :color_id, :size_id, :price_id, presence: true
+  validates :color_id, :size_id, presence: true
 
   delegate :name, :description, to: :product
 end

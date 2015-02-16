@@ -5,5 +5,9 @@ en:
         name: 'Name'
         description: 'Description'
         assortment: 'Assortment'
+        price: 'Price'
+        color: 'Color'
+        size: 'Size'
+        in_stock: 'In Stock'
       show:
         back: 'Back'

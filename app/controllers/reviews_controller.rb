@@ -10,7 +10,7 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    @review = @product.reviews.build(params[:review].merge(user_id: current_user.id))
+    @review = @product.reviews.build(review_params.merge(user_id: current_user.id))
     render action: :new unless @review.save
   end
 
@@ -23,5 +23,9 @@ class ReviewsController < ApplicationController
 
   def find_product
     @product = Product.find_by_id(params[:product_id])
+  end
+
+  def review_params
+    params.require(:review).permit(:body, :product_id, :user_id)
   end
 end

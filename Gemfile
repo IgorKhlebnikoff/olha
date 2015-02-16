@@ -41,6 +41,7 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem "paperclip", "~> 4.2"
   gem 'font-awesome-rails', '~> 4.3.0'
   gem 'pg'
   gem 'slim'
@@ -64,7 +65,6 @@ group :development, :test do
   gem 'carmen-rails'
   gem 'populator'
   gem 'ajaxful_rating', '2.2.9.1', git: 'https://github.com/IgorKhlebnikov/ajaxful-rating.git', branch: 'for_rails4.2'
-  gem 'protected_attributes'
   gem 'rails-i18n'
   gem 'elasticsearch-model'
   gem 'elasticsearch-rails'

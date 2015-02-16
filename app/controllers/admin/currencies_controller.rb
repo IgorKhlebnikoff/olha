@@ -8,10 +8,16 @@ class Admin::CurrenciesController < ApplicationController
   end
 
   def create
-    Currency.create(params[:currency])
+    Currency.create(currency_params)
   end
 
   def destroy
     Currency.find_by_id(params[:id]).destroy
+  end
+
+  private
+
+  def currency_params
+    params.require(:currency).permit(:name)
   end
 end

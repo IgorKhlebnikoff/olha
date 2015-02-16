@@ -11,11 +11,11 @@ class Admin::VariantsController < ApplicationController
   end
 
   def create
-    @variant = @product.variants.create(params[:variant])
+    @variant = @product.variants.create(variant_params)
   end
 
   def update
-    @variant.update_attributes(params[:variant])
+    @variant.update_attributes(variant_params)
   end
 
   def destroy
@@ -30,5 +30,9 @@ class Admin::VariantsController < ApplicationController
 
   def find_variant
     @variant = @product.variants.find_by_id(params[:id])
+  end
+
+  def variant_params
+    params.require(:variant).permit(:price, :color_id, :size_id, :in_stock, :picture)
   end
 end

@@ -1,0 +1,3 @@
+$('#modal_window').addClass('text-center');
+$('#modal_window').modal('show');
+$('#modal_window .modal-content').html("<%= j(render partial: 'form', locals: { url: admin_assortments_path, method: 'post' })%>");

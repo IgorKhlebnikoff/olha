@@ -1,6 +1,6 @@
 class Admin::ProductsController < ApplicationController
   before_filter :find_product, only: [:show, :edit, :update, :destroy]
-  before_filter :all_assortments, only: [:new, :edit]
+  before_filter :all_assortments, :all_colors, :all_sizes, only: [:new, :edit]
 
   def index
     @products = DataFormater.new.paginate(Product, params[:product_page])
@@ -15,11 +15,11 @@ class Admin::ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.create(params[:product])
+    @product = Product.create(product_params)
   end
 
   def update
-    unless @product.update_attributes(params[:product])
+    unless @product.update_attributes(product_params)
       render action: :edit
     end
   end
@@ -33,8 +33,21 @@ class Admin::ProductsController < ApplicationController
   def find_product
     @product = Product.find_by_id(params[:id])
   end
-  
+
+  def product_params
+    params.require(:product).permit(:name, :description, :assortment_id, variants_attributes: [:price, :color_id, :size_id, :in_stock])
+  end
+
   def all_assortments
     @assortments = Assortment.all
   end
+
+  def all_colors
+    @colors = Color.all
+  end
+
+  def all_sizes
+    @sizes = Size.all
+  end
+
 end

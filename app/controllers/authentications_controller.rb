@@ -17,4 +17,10 @@ class AuthenticationsController < ApplicationController
       end
     end
   end
+
+  private
+
+  def authentication_params
+    params.require(:authentication).permit(:provider, :token, :uid, :user_id)
+  end
 end

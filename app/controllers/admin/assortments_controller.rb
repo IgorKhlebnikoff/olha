@@ -13,7 +13,7 @@ class Admin::AssortmentsController < ApplicationController
   def create
     category = Category.find_by_id(params[:category_id])
     if category
-      @assortment = Assortment.new(params[:assortment])
+      @assortment = Assortment.new(assortment_params)
       category.assortments << @assortment
       unless @assortment.valid?
         categories
@@ -25,7 +25,7 @@ class Admin::AssortmentsController < ApplicationController
   end
 
   def update
-    unless @assortment.update_attributes(params[:assortment])
+    unless @assortment.update_attributes(assortment_params)
       render action: :edit
     end
   end
@@ -46,6 +46,10 @@ class Admin::AssortmentsController < ApplicationController
 
   def assortments
     @assotrments = Assortment.all
+  end
+
+  def assortment_params
+    params.require(:assortment).permit(:name, :category_id, category_attributes: [:name])
   end
 
 end
