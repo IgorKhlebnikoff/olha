@@ -196,6 +196,7 @@ input[type="submit"] {
   }
   .product-menu {
     width: 100%;
+    padding: 0 15px;
     .product-code {
       float: left;
       margin-left: 15px;
@@ -221,17 +222,28 @@ input[type="submit"] {
   }
   .loadToSuccess {
     background-color: #21B093;
-    color: #000000;
+    color: #ffffff;
     margin: 20px 0 30px 0;
+    margin-left: 20px;
+    a {
+      color: #ffffff;
+    }
   }
   .loadToSuccess:hover {
-    background-color: #21B093;
-    color: #ffffff;
+    background-color: #22cdaf;
   }
   .tab-content {
-    border: 1px solid #DDD;
+    border-left: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+    border-right: 1px solid #DDD;
+  }
+  li {
+    a:focus {
+      outline: none;
+    }
   }
 }
+
 
 
 
@@ -354,4 +366,12 @@ input[type="submit"] {
       }
     }
   }
+}
+#rate {
+  img {
+    width: 12%;
+  }
+}
+.product-name {
+  text-align: center;
 }

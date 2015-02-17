@@ -38,6 +38,7 @@ namespace :db do
             variant.color_id = Color.order('RANDOM()').first
             variant.size_id = Size.order('RANDOM()').first
             variant.quantity = 99
+            variant.price = Random.rand(100)
           end
         end
       end

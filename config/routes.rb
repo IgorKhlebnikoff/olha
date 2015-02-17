@@ -1,4 +1,7 @@
 Olha::Application.routes.draw do
+  post '/rate' => 'rater#create', :as => 'rate'
+  get 'rates/create'
+
   devise_for :users, controllers: { registrations: 'registrations' }
 
   match '/auth/:provider/callback' => 'authentications#create', via: [:get, :post]
@@ -16,10 +19,11 @@ Olha::Application.routes.draw do
   end
 
   resources :products, only: [:index, :show] do
-    member do
-      post 'rate'
-    end
     resources :reviews, only: [:index, :new, :create, :destroy]
+  end
+
+  resources :products do
+    resources :rates, only: :create
   end
 
   resources :profiles, only: [:show, :edit, :update]
