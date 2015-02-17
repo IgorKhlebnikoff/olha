@@ -9,7 +9,7 @@ class Product < ActiveRecord::Base
 
   belongs_to :assortment
 
-  ajaxful_rateable { conditions.where( stars: 5, dimensions: [:quality]) }
+  ratyrate_rateable "quality", "price"
 
   accepts_nested_attributes_for :variants
 

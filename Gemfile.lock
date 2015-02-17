@@ -9,13 +9,6 @@ GIT
       rails (>= 3.1)
       railties (>= 3.1)
 
-GIT
-  remote: https://github.com/IgorKhlebnikov/ajaxful-rating.git
-  revision: 7d2b518b7298879664099b915a8ba6e484ddd93e
-  branch: for_rails4.2
-  specs:
-    ajaxful_rating (2.2.9.1)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -244,6 +237,7 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
+    ratyrate (1.2.2.alpha)
     rdoc (4.2.0)
       json (~> 1.4)
     ref (1.0.5)
@@ -343,7 +337,6 @@ PLATFORMS
 DEPENDENCIES
   activemerchant
   acts_as_votable
-  ajaxful_rating (= 2.2.9.1)!
   breadcrumbs_on_rails
   byebug
   capybara
@@ -376,6 +369,7 @@ DEPENDENCIES
   pry-rails
   rails (= 4.2.0)
   rails-i18n
+  ratyrate
   rspec
   rspec-collection_matchers
   rspec-mocks
