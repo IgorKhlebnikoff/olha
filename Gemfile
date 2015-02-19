@@ -64,10 +64,10 @@ group :development, :test do
   gem 'carmen'
   gem 'carmen-rails'
   gem 'populator'
-  gem 'ajaxful_rating', '2.2.9.1', git: 'https://github.com/IgorKhlebnikov/ajaxful-rating.git', branch: 'for_rails4.2'
   gem 'rails-i18n'
   gem 'elasticsearch-model'
   gem 'elasticsearch-rails'
+  gem 'ratyrate'
 
   group :development, :test do
     gem 'rspec'

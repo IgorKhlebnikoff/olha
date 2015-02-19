@@ -24,12 +24,4 @@ class ProductsController < ApplicationController
   def find_product
     @product = Product.find_by_id(params[:id])
   end
-
-  def product_params
-    params.require(:product).permit(:name, :description, :assortment_id, variants_attributes: [:price, :color_id, :size_id, :in_stock])
-  end
-
-  def rate_params
-    params.require(:rate).permit(:rate, :dimension)
-  end
 end
