@@ -3,11 +3,36 @@
       .col-md-3= @product.name
       .col-md-6= @product.description
   p= link_to t('.back'), admin_root_path */
-.row
+.row-fluid
   br
-  .col-md-1
-  .col-md-5.show-menu
-    = render partial: 'show_left_panell'
+  .col-md-6.products-show
+    h1.text-left= @product.name
+    h3 Description
+    .show-description.products-show
+      = @product.description
+    -@product.variants.each do |variant|
+      h3 Variants
+      .products-show
+        .row
+          .col-md-2
+            .product-picture
+              img src="#{variant.picture(:medium)}"
+          .col-md-10
+            .row
+              .col-md-9
+                h4.variant-params Color
+              .col-md-3
+                .price= variant.color.name
+            .row
+              .col-md-9
+                h4.variant-params Size
+              .col-md-3
+                .price= variant.size.name
+            .row
+              .col-md-9
+                h4.variant-params Price
+              .col-md-3
+                .price= variant.price
+
+
   .col-md-6
-    .productsrow
-      = render partial: 'show_right_panell'

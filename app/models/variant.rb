@@ -6,7 +6,7 @@ class Variant < ActiveRecord::Base
   belongs_to :color
   belongs_to :size
 
-  has_attached_file :picture, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "no_image.jpg"
+  has_attached_file :picture, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/assets/no_image.jpg"
   validates_attachment_content_type :picture, :content_type => /\Aimage\/.*\Z/
 
   validates :in_stock, presence: true

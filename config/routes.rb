@@ -1,6 +1,5 @@
 Olha::Application.routes.draw do
   post '/rate' => 'rater#create', :as => 'rate'
-  get 'rates/create'
 
   devise_for :users, controllers: { registrations: 'registrations' }
 

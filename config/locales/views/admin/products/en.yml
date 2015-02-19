@@ -9,5 +9,6 @@ en:
         color: 'Color'
         size: 'Size'
         in_stock: 'In Stock'
+        picture: 'Picture'
       show:
         back: 'Back'

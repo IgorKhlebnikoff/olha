@@ -375,3 +375,49 @@ input[type="submit"] {
 .product-name {
   text-align: center;
 }
+
+/*     Users/Sign_in    */
+#new_user {
+  width: 350px;
+}
+#user_email, #user_password {
+  float: right;
+  height: 30px;
+}
+
+
+
+/* Admin Product Show */
+.products-show {
+  border: 1px solid darkgray;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  .show-description {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  .variant-params {
+    float: left;
+    width: 70px;
+    padding-left: 25px;
+  }
+  .price {
+    float: right;
+    text-align: right;
+    padding: 5px 15px 0 0 ;
+  }
+  .product-picture {
+    width: 120px;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+  }
+}
+
+
+/* Admin Product Edit */
+.distance {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
