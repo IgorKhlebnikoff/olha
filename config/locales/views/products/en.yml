@@ -4,3 +4,5 @@ en:
       back_to_products: 'Back to products'
       submit: 'Leave comment'
       to_wishes: 'Add to wishes'
+    show_left_panell:
+      to_wishes: 'Add to wishes'

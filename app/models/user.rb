@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
 
   belongs_to :role
 
-  ajaxful_rater
+  ratyrate_rater
 
   delegate :first_name, :last_name, :phone_number, :gender, :full_name, to: :profile
 
