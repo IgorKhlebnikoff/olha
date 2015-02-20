@@ -79,13 +79,6 @@ ActiveRecord::Schema.define(version: 20150216102647) do
     t.datetime "updated_at"
   end
 
-  create_table "prices", force: :cascade do |t|
-    t.float    "amount"
-    t.integer  "currency_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "products", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
