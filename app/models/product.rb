@@ -9,10 +9,12 @@ class Product < ActiveRecord::Base
 
   belongs_to :assortment
 
-  ajaxful_rateable { conditions.where( stars: 5, dimensions: [:quality]) }
+  ratyrate_rateable "quality", "price"
 
-  accepts_nested_attributes_for :variants
-
+  accepts_nested_attributes_for :variants, allow_destroy: true,
+    reject_if: ->(attributes) do
+      %w{color_id size_id price}.all? { |attr| attributes[attr].empty? }
+    end
   mapping do
     indexes :name, analyzer: 'snowball', boost: 100
     indexes :description, analyzer: 'snowball'

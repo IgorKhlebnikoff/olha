@@ -9,6 +9,7 @@
   .row
     .product-code Product code:
     .product-code-description ECOM1204
+    = render partial: 'rate'
   hr
   .col-md-12
     form.form-horizontal role="form"
@@ -62,7 +63,10 @@
     button.loadToSuccess.btn.btn-primary-custom.btn-lg
       i.fa.fa-shopping-cart
       | Add to Cart
-  .col-md-12
+    button.loadToSuccess.btn.btn-primary-custom.btn-lg
+      i.fa.fa-shopping-cart
+        = link_to t('.to_wishes'), wish_add_path(@variants.first), remote: true if @variants.present?
+  .row-fluid
     ul.nav.nav-tabs
       li.active
         a data-toggle="tab" href="#details"

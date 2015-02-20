@@ -1,10 +1,10 @@
-.modal-header
+.modal-header.distance
   h3 Add Product
 .modal-body
-  .row
-    = form_for @product, url: url, method: method, remote: true, builder: StandartBuilder do |f|
+  .row.distance
+    = form_for @product, url: url, method: method, builder: StandartBuilder do |f|
       .row
-        = f.error_messages(attribute_name: false)
+        = f.error_messages
       .row
         .col-md-3= f.label t('.name')
         .col-md-6= f.text_field :name
@@ -14,19 +14,27 @@
       .row
         .col-md-3= f.label t('.assortment')
         .col-md-6= f.collection_select :assortment_id, @assortments, :id, :name, prompt: true
-      = f.fields_for :variants, @product.variants.build do |v|
-        .row
-          .col-md-3= v.label t('.price')
-          .col-md-6= v.text_field :price
-        .row
-          .col-md-3= v.label t('.color')
-          .col-md-6= v.collection_select :color_id, @colors, :id, :name, prompt: true
-        .row
-          .col-md-3= v.label t('.size')
-          .col-md-6= v.collection_select :size_id, @sizes, :id, :name, prompt: true
-        .modal-footer
+      br
+      -5.times do
+        = f.fields_for :variants, @product.variants.build do |v|
           .row
+            .col-md-3
+              = v.label t('.price')
+              = v.text_field :price
             .col-md-2
+              = v.label t('.color')
+              = v.collection_select :color_id, @colors, :id, :name, prompt: true
+            .col-md-2
+              = v.label t('.size')
+              = v.collection_select :size_id, @sizes, :id, :name, prompt: true
+            .col-md-1
               = v.label t('.in_stock')
-            .col-md-1= v.check_box :in_stock, {}, 'true', 'false'
-            .col-md-9= f.submit t('save')
+              = v.check_box :in_stock, {}, 'true', 'false'
+            .col-md-1
+              = v.label :picture, t('.picture')
+            .col-md-3
+              = v.file_field :picture
+          hr
+      .row
+        .col-md-10
+        .col-md-2= f.submit t('save')

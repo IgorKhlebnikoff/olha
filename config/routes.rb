@@ -1,4 +1,6 @@
 Olha::Application.routes.draw do
+  post '/rate' => 'rater#create', as: 'rate'
+
   devise_for :users, controllers: { registrations: 'registrations' }
 
   match '/auth/:provider/callback' => 'authentications#create', via: [:get, :post]
