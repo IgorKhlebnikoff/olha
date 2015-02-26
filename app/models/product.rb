@@ -20,6 +20,9 @@ class Product < ActiveRecord::Base
     indexes :description, analyzer: 'snowball'
   end
 
+  validates :name, :description, presence: true,
+            length: { minimum: 3 }
+
   class << self
     def search(term)
       tire.search do

@@ -28,6 +28,7 @@ class Admin::ProductsController < ApplicationController
 
   def destroy
     @product.destroy
+    redirect_to admin_products_path
   end
 
   private
@@ -51,5 +52,4 @@ class Admin::ProductsController < ApplicationController
   def load_sizes
     @sizes = Size.all
   end
-
 end
