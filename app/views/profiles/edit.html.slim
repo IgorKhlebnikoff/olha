@@ -11,6 +11,7 @@
       = f.telephone_field :phone_number
       = f.label t('.gender')
       = f.select :gender, options_for_select(%w[Male Female])
+      br
       = f.label t('.country')
       = f.country_select :country, {priority: %w(UA RU BY)}, prompt: 'select'
       p

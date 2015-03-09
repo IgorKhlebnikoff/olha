@@ -8,8 +8,7 @@
         .col-md-2= f.label t('.name')
         .col-md-5= f.text_field :name
         .col-md-5= select_tag :category_id, options_from_collection_for_select(@categories, 'id', 'name')
-      .modal-footer
-        .col-md-6= f.submit t('save')
-        .col-md-3
-          button.cancel= link_to t('cancel'), 'javascript: void(false)', onclick: 'Popup.hideModal'
-
+      .row
+        .col-md-9.text-right = f.submit t('save')
+        .col-md-2.text-right
+          #hideModal.cancel.btn.btn-default = t('cancel')

@@ -192,6 +192,9 @@ input[type="submit"] {
 
 .cancel {
   width: 100px;
+  height: 31px;
+  color: #808080;
+  background-color: #F3F3F3;
 
   a {
     color: #808080;
@@ -437,16 +440,36 @@ input[type="submit"] {
   text-align: center;
 }
 
-/*     Users/Sign_in    */
+/*     Users/Sign_in   */
 
 #new_user {
-  width: 350px;
+  width: 400px;
 }
 
-#user_email, #user_password {
+#user_email, #user_password, #user_password_confirmation, .field_with_errors {
   float: right;
   height: 30px;
 }
+
+.edit_profile {
+  padding: 20px;
+  width: 380px;
+
+  input, select {
+    float: right;
+    height: 30px;
+    width: 200px;
+  }
+
+  input[type=submit] {
+    width: 100px;
+  }
+}
+
+#profile_country {
+  width: 200px;
+}
+
 
 /* Admin Product Show */
 
