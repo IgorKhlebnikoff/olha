@@ -29,10 +29,15 @@ sendRequest = function(url, type) {
 Popup = function() {};
 
 Popup.hideModal = function() {
-  addWall = function(node) {
-      $(node).append('<div class="back-wall"><div>');
-  };
-  $('#modal_window').modal('hide');
+    $('#modal_window').modal('hide');
 };
 
+addWall = function(node) {
+    $(node).append('<div class="back-wall"><div>');
+};
 
+$(document).ready(function() {
+    $(document).on('click', '#hideModal', function(e) {
+        Popup.hideModal();
+    });
+});

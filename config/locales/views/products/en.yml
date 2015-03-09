@@ -1,8 +1,11 @@
 en:
   products:
+    products:
+      no_products: 'No Products'
     show:
       back_to_products: 'Back to products'
       submit: 'Leave comment'
       to_wishes: 'Add to wishes'
+      no_products: 'No Products'
     show_left_panell:
       to_wishes: 'Add to wishes'

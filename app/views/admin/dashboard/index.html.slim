@@ -16,6 +16,6 @@
   #products data-url="#{admin_products_path}"
     h3= t('.products_title')
     .row
-      .col-md-12= link_to t('.add_product'),  new_admin_product_path, remote: true
+      .col-md-12= link_to t('.add_product'),  new_admin_product_path
     #products_list.block
       = render partial: 'admin/products/products'

@@ -2,15 +2,15 @@
   h3 Add Category
 .modal-body
   .row
-    .col-md-12
-      h4= title
-    .row
+    h4= title
+    .row-fluid
       = form_for @category, url: url, method: method, remote: true, builder: StandartBuilder do |f|
         div= f.error_messages
         .row
           .col-md-3= f.label t('.name')
           .col-md-6= f.text_field :name
-        .modal-footer
-          .col-md-6= f.submit t('save')
-          .col-md-2
-            button.cancel= link_to t('cancel'), 'javascript: void(false)', onclick: 'Popup.hideModal()'
+        br
+        .row
+          .col-md-9.text-right = f.submit t('save')
+          .col-md-2.text-right
+            #hideModal.cancel.btn.btn-default = t('cancel')

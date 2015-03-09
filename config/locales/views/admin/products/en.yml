@@ -1,6 +1,8 @@
 en:
   admin:
     products:
+      products:
+        no_products: 'No Products'
       form:
         name: 'Name'
         description: 'Description'
